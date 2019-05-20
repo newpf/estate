@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>laiwukeji</title>
+		<link rel="stylesheet" href="../chajian/layui.css">
+		<script src="../chajian/jquery-3.2.1.min.js"></script>
+		<script src="../chajian/layui.js"></script>
+		<style>
+							/*头部导航条*/
+			.header{background: #fff;position: fixed;width: 100%;}
+			.layui-nav .layui-nav-item a{color:#000000;}
+			.layui-nav{float: right;background-color: rgba(0,0,0,0); color:#000000;}
+			.btn{float: right;}
+			.btn {height:34px;margin:12px 10px;padding:0 25px;line-height: 34px;border:1px solid #007DDB;border-radius: 8px;}
+			.layui-nav .layui-nav-item a:hover{color: #1E9FFF;}
+			.aae{background: #01AAED;}
+			.logo{position: absolute;}
+			.logo img{height: 60px;}
+			.one{margin: 0 auto;}
+							/*中部logo区域*/
+			.site-banner{height: 700px; width: 100%; position: relative; background: #007DDB;}
+			.site-banner .site-banner-main{position: absolute;width: 100%; height: 100%;}
+			.site-banner-main img{height: 100%;width: 100%;}
+			.layui-row .field-b{margin-bottom:0;}
+			               /*中部内容区域*/
+			.layui-container{margin-top: 60px;}
+			.layui-container .layui-main{margin:0 auto; text-align:center;}
+			.layui-elem-field{width: 20%; margin: 20px auto;}
+			.layui-main .layui-col-md12{height: auto;margin-bottom:40px ;}
+			.layui-main .layui-col-md12 .layui-col-md3{height:250px;border: 5px solid #fff;}
+			.layui-main .layui-col-md12 .layui-col-md4{height:250px;border: 3px solid #fff;}
+			#name{height: auto; margin-bottom:50px; background: #EEEEEE;text-align: left;}
+			.layui-row{text-align: center;}
+			legend{color: #1E9FFF;}
+			.layui-elem-field{border-color: #0000FF;}
+			.layui-col-md3{color:#000000;line-height: 60px;}
+			.layui-col-md3 span{display: inline-block; line-height: 30px;}
+			.zd{color: #999999;}
+			.col-b{margin-bottom: 20%;}
+							/*咨询我们*/
+			.box-zx{height:50px;width:50px;position: fixed;right: 20px;bottom: 16%; background: #007DDB;padding: 15px;color:#fff;}
+		 	.box-zx:hover{cursor:pointer;}
+		 	.layui-col-md5 .layui-card-header{font-weight: 600; font: 20px/42px '微软雅黑'}
+		 	.layui-col-md5 .layui-card-body{padding: 10px 40px;height: 150px;}
+		 					/*底部区域*/
+		 	.footer-index{padding: 20px 0 20px 0; line-height: 30px; background: rgba(2,5,1,0.8); color: #FFF9EC;}
+		 	.footer-index .layui-main{text-align: center;}
+		 	.footer-index .layui-main .left{float:left; display: inline-block;}
+		 	.footer-index .layui-main .right{float:right; display: inline-block;}
+		 	.footer-index .layui-main .right img{width: 40%;height: 40%;}
+		</style>
+	</head>
+	<body>
+												<!--头部导航条-->
+		<div class="layui-header header header-doc">
+				<div class="layui-main">
+					<a class="logo">
+						<img src="../img/logo-small.png"/>
+					</a>
+					<ul class="layui-nav">
+						<li class="layui-nav-item">
+							<a href="javascript:;">首页</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">产品</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">服务</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">动态</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">帮助</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">关于</a>
+						</li>
+						<span class="btn aae">注册</span>
+						<span class="btn">登录</span>
+					</ul>
+				</div>
+			</div>
+						<!--中部logo区域-->
+			<div class="site-banner">
+				<div class="site-banner-main">	
+					<img src="../img/timg.jpg"/>
+				</div>
+			</div>
+						<!--中部内容区域-->
+			<div class="layui-container ">
+				<div class="layui-row row-one">
+						<fieldset class="layui-elem-field layui-field-title">
+							<legend>全方面服务</legend>
+						</fieldset>
+						<div class="layui-col-md12 col-b">
+							<div class="layui-col-md3">
+								<h1>临时收费</h1>
+								<img src="../img/c03.png"/>
+								<span>可手动添加临时收费项目，将复杂的收费计算简单化，减少员工工作负担与误差。</span>
+							</div>
+							<div class="layui-col-md3">
+								<h1>预交费</h1>
+								<img src="../img/c03.png"/>
+								<span>可手动添加临时收费项目，将复杂的收费计算简单化，减少员工工作负担与误差。</span>
+							</div>
+							<div class="layui-col-md3">
+								<h1>收费简单化</h1>
+								<img src="../img/c03.png"/>
+								<span>可手动添加临时收费项目，将复杂的收费计算简单化，减少员工工作负担与误差。</span>
+							</div>
+							<div class="layui-col-md3">
+								<h1>数据报表</h1>
+								<img src="../img/c03.png"/>
+								<span>可手动添加临时收费项目，将复杂的收费计算简单化，减少员工工作负担与误差。</span>
+							</div>
+						</div>					
+
+
+						<fieldset class="layui-elem-field layui-field-title field-b">
+							<legend>手机APP</legend>
+						</fieldset>
+						<span class="zd">账单、缴费微信同步，住户缴费更方便；</span>
+						<div class="layui-col-md12 col-b">
+							<div class="layui-col-md4">
+								<img src="../img/wx_02.png"/>
+							</div>
+							<div class="layui-col-md4">
+								<img src="../img/wx_02.png"/>
+							</div>
+							<div class="layui-col-md4">
+								<img src="../img/wx_02.png"/>
+							</div>
+						</div>					
+
+										 <!--中部公司介绍-->
+					<div id="name" class="layui-col-md12">
+												<!--左侧区域-->
+						<div class="layui-col-md5 layui-col-md-offset1"style="margin-top: 30px;">
+					    	<div class="layui-card-header">公司简介</div>
+					    	<div class="layui-card-body"> 
+					    		莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+							</div>
+							<div class="layui-card-header">收费管理</div>
+							<div class="layui-card-body">
+								莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+							</div>
+				    	</div>
+				    							<!--右侧区域-->
+				    	<div class="layui-col-md5 "style="margin-top: 30px;">
+					    	<div class="layui-card-header">系统特点</div>
+					    	<div class="layui-card-body">
+					    		莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+							</div>
+							<div class="layui-card-header">动态</div>
+					    	<div class="layui-card-body">
+					    		莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+							</div>
+				    	</div>		
+					</div>
+				</div>
+			</div>
+									<!--底部区域-->
+			<div class="footer-index layui-col-md12">
+				<div class="layui-main">
+					<p class="left">电子邮箱:newpfthatsme1@163.com<br>企业地址:郑州市管城回族区美林河畔一号楼2806</p>
+					<p class="right">电话:15203885929<br>企业微信: <img src="../img/1556002005(1).jpg"/></p>
+
+				</div>
+			</div>
+									<!--咨询我们-->
+			<div class="box-zx"><br>
+				<div class="zx-zc">
+					<a href=" javascript:;"></a>
+					<a href=" javascript:;"></a>
+					<a href=" javascript:;"></a>
+					<a href=" javascript:;"></a>
+				</div>
+			</div>
+	</body>
+	<script>
+		$(document).ready(function(){
+			layui.use('element'),function(){
+				var element = layui.element
+			}
+		})
+	</script>
+</html>
