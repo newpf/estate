@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" href="../../layui/layui-v2.4.5/layui/css/layui.css">
+		<script src="../../chajian/jquery-3.2.1.min.js"></script>
+		<script src="../../layui/layui-v2.4.5/layui/layui.js"></script>
+		<style>
+			
+		ul{list-style: none;margin: 0;}
+        .layui-layout{width: 100%;padding: 0;}
+		.layui-col-lg2{background:#1E9FFF ;height: 100%;}
+		.grid{width: 100%;}
+		.site-content {margin-left: 200px;}
+		.header{font: 12px "微软雅黑";line-height: 20px;text-align: center;margin: 20px 0;display: none; transition: width .2s, height .2s, transform .2s;-webkit-transition: width .2s, height .2s, -webkit-transform .2s;}
+		.header span{display: block;}
+		.header .color{margin-top: 15px;color: #737383;}
+		.layui-header ul{padding: 0 80px 0 0; }
+		.layui-header{margin-left: -140px;}
+		.header .color-tow{font: 15px "宋体";margin-top: 5px;color: #93D1FF;font-weight:bold;}
+		.layui-input{width: 20%;}
+		.layui-form-select{width: 20%;}
+		.layui-select-title input{width: 100%;}
+		.layui-table{text-align: center;}
+		.layui-tab{height: auto;}
+		.layui-tab-content{height: auto;padding: 0;}
+		/*.layui-tab-content .layui-tab-item iframe {
+            width: 100%;
+            border: 0;
+            height: 100%;
+        }*/
+       	.layui-bg-black{margin-top: -60px;z-index: 99999999;}
+		.layui-show{height: 100%;}
+		.x-iframe {position:absolute;height:100%;width:100%;}
+		.layui-tab{margin: 0;}
+		.layui-layout-right dd{border-bottom:1px solid #E2E2E2;line-height: 32px;}
+		.layui-body{width: 100%;height: auto;overflow: hidden;margin-left:-140px ;}
+		.cv{width:200px;height:60px;text-align: center;margin-bottom:20px;background: #000000;display: none;}
+		.wk{font-weight: 600;font: 18px/60px "微软雅黑";color: #009688;}
+		.layui-layout-admin .layui-side{width: 60px;}
+		.layui-side .layui-bg-black{}
+		#sideul{transition: width .4s;}
+		.cvc{width: 60px;height: 60px;background: #000000;text-align: center;line-height: 60px;}
+		.wk-one{width:60px ;height: 100px;margin-bottom:40px;text-align: center;line-height: 50px;line-height: 50px;}
+		.wk-one img{width: 100%;height: 100%;margin-top: 30px;}
+		.wk-one span{vertical-align:top;}
+		.layui-side .layui-bg-black .layui-nav-item{display: none;}
+		.tow{line-height: 45px;display: inline-block;margin-left:-3px;width:60px;margin-right:100%;text-align: center;}
+		</style>
+	</head>
+	<body class="layui-layout-body" >
+		<div class="layui-layout layui-layout-admin">	
+									<!--上侧导航条-->
+			    	<div class="layui-header">
+						<ul class="layui-nav layui-layout-left" lay-filter="side">
+							<li class="layui-nav-item layadmin-flexible left" lay-unselect>
+						       	<a href="javascript:;" class="kit-side-fold" title="侧边伸缩">
+						           <i class=" alone layui-icon layui-icon-shrink-right" aria-hidden="true" ></i>
+						        </a>
+					        </li>
+		
+						  	<li class="layui-nav-item left">
+							    <a href="">控制台</a>		
+						  	</li>
+							<li class="layui-nav-item left">
+							    <a href="">个人中心</a>
+							</li>
+							</ul>
+						<ul class="layui-nav layui-layout-right">
+							<li class="layui-nav-item">
+							    <a href="javascript:;">管理员</a>
+							    <dl class="layui-nav-child">
+							      <dd><a href="javascript:;" _href="../denglu/stration-xg.html"><cite>修改密码</cite></a></dd>
+							      <dd><a href="../denglu/stration-dl.html">退出登录</a></dd>
+							    </dl>							   
+							</li>
+						</ul>
+			    	</div>
+											<!--左侧导航条-->
+					<div class="layui-side layui-bg-black">
+				    	<ul class="layui-nav layui-nav-tree layui-nav-side layui-side layui-bg-black x-side " id="sideul"   lay-filter="side" lay-shrink="all">
+				    		<div class="cv"><p class="wk">悟空智能社区</p></div>
+				    		<div class="cvc"><img src="../../img/logo.png"/></div>
+				    		<li class=" header">
+				    			<img src="../../img/微信图片_20190521152933.png" width="100px" height="100px">
+			    			</li>
+			    			<li class=" wk-one">
+				    			<div><span></span></div> 
+			    			</li>
+			    			<span class="layui-icon tow">&#xe68e;</span>
+			    			<span class="layui-icon tow">&#xe665;</span>
+			    			<span class="layui-icon tow">&#xe62c;</span>
+			    			<span class="layui-icon tow">&#xe609;</span>
+			    			<span class="layui-icon tow">&#xe63c;</span>
+			    			<span class="layui-icon tow">&#xe655;</span>
+				    		<li class="layui-nav-item">
+				    			<a href="javascript:;">
+				    				<span class="layui-icon">&#xe68e;</span>
+				    				<i>主页</i>
+				    				<span class="layui-nav-more"></span>
+				    			</a>
+				    			<dl class="layui-nav-child">
+				    				<dd><a href="javascript:;" _href="" ><cite>更改个人信息</cite></a></dd>
+				    				<dd><a href="javascript:;" _href=""><cite>表单</cite></a></dd>
+				    				<dd><a href="javascript:;" _href=""><cite>日历</cite></a></dd>
+				    				<dd><a href="javascript:;" _href=""><cite>时间线</cite></a></dd>
+				    			</dl>
+				    		</li>
+				    		<li class="layui-nav-item ">
+				    			<a href="javascript:;">
+				    				<span class="layui-icon">&#xe665;</span>
+				    				<i>布局</i>
+				    				<span class="layui-nav-more"></span>
+				    			</a>
+				    			<dl class="layui-nav-child">
+				    			 	<dd><a href="javascript:;">主页一</a></dd>
+				    				<dd><a href="javascript:;">主页二</a></dd>
+				    				<dd><a href="javascript:;">主页三</a></dd>
+				    				<dd><a href="javascript:;">主页四</a></dd>
+				    			</dl>
+				    		</li>
+				    		<li class="layui-nav-item ">
+				    			<a href="javascript:;">
+				    				<span class="layui-icon">&#xe62c;</span>
+				    				<i>统计图表</i>
+				    				<span class="layui-nav-more"></span>
+				    			</a>
+				    			<dl class="layui-nav-child">
+				    				<dd><a href="javascript:;" _href=""><cite>轮播</cite></a></dd>
+				    				<dd><a href="javascript:;" _href=""><cite>jquery树</cite></a></dd>
+				    				<dd><a href="javascript:;" _href=""><cite>增删改查</cite></a></dd>
+				    				<dd><a href="javascript">主页四</a></dd>
+				    			</dl>
+				    		</li>
+				    		<li class="layui-nav-item  ">
+				    			<a href="javascript:;">
+				    				<span class="layui-icon">&#xe609;</span>
+				    				<i>信箱</i>
+				    				<span class="layui-nav-more"></span>
+				    			</a>
+				    			<dl class="layui-nav-child">
+				    				<dd><a href="javascript">主页一</a></dd>
+				    				<dd><a href="javascript">主页二</a></dd>
+				    				<dd><a href="javascript">主页三</a></dd>
+				    				<dd><a href="javascript">主页四</a></dd>
+				    			</dl>
+				    		</li>
+				    		<li class="layui-nav-item ">
+				    			<a href="javascript:;">
+				    				<span class="layui-icon">&#xe63c;</span>
+				    				<i>表单</i>
+				    				<span class="layui-nav-more"></span>
+				    			</a>
+				    			<dl class="layui-nav-child">
+				    				<dd><a href="javascript">主页一</a></dd>
+				    				<dd><a href="javascript">主页二</a></dd>
+				    				<dd><a href="javascript">主页三</a></dd>
+				    				<dd><a href="javascript">主页四</a></dd>
+				    			</dl>
+				    		</li>
+				    		<li class="layui-nav-item ">
+				    			<a href="javascript:;">
+				    				<span class="layui-icon">&#xe655;</span>
+				    				<i>页面</i>
+				    				<span class="layui-nav-more"></span>
+				    			</a>
+				    			<dl class="layui-nav-child">
+				    				<dd><a href="javascript">主页一</a></dd>
+				    				<dd><a href="javascript">主页二</a></dd>
+				    				<dd><a href="javascript">主页三</a></dd>
+				    				<dd><a href="javascript">主页四</a></dd>
+				    			</dl>
+				    		</li>
+				    	</ul>
+					</div>
+			<div class="layui-body">
+					  							<!--选项卡-->
+				
+									<!--lay-filter="x-tab"点击新增一个
+									lay-allowClose="true"删除-->
+				<div class="layui-tab layui-tab-card " lay-filter="x-tab" lay-allowClose="true">
+					<ul class="layui-tab-title">
+						<li class="layui-this layui-unselect">介绍<i class="layui-icon layui-unselect layui-tab-close"></i></li>
+					</ul>
+					<div class="layui-tab-content">
+						<div class="layui-tab-item layui-show">
+							<iframe frameborder="0" src="../kongzhitai/stration-six.html" class="x-iframe"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-footer" style="text-align: center;">
+				<p>2019河南莱唔智能科技有限公司版权所有 All Rights Resevied</p>
+			</div>
+		</div>
+	</body>
+	<script>
+				$(document).ready(function(){
+				layui.use(['element','form','table','carousel'], function(){
+				  	var element = layui.element,
+				  		form = layui.form,
+				  		table = layui.table,
+				  		carousel = layui.carousel
+//						轮播图
+				carousel.render({
+					elem:'#text'
+					,width:'100%'
+					,height:'800px'
+					,arrow:'always'
+					,interval:'1000'
+				});
+//					表单监听提交
+				  	form.on('submit(formDemo)', function(data){
+				    layer.msg(JSON.stringify(data.field));
+				    return false;
+			 	});
+
+//			 	监听导航点击					
+			 	element.on('nav(side)',function(elem){
+			 		//layui 2.3.0 版,elem 返回的是当前 A元素,需要在父元素中找 _href 值
+			 		var title = elem.find('cite').text();
+			 		var	url = elem.offsetParent().find('a').attr('_href');
+//			 	        	如果没有节点
+						if(url == undefined){
+							return false;
+						}else{
+							for(var i=0;i<$(".x-iframe").length;i++){
+								t = $('.x-iframe').eq(i).attr('src').split("?");
+								if(t[0] == url){
+									element.tabChange('x-tab',i)
+									return;
+								}
+							}
+						}
+//								新建选项卡
+							if(i == $('.layui-tab-title li').length){
+								rand = Math.random();
+								if(url.length == 0 || url.indexOf("javascript")>-1){
+									return;
+								}else if(url.indexOf("?" > -1)){
+
+								}else{
+									url = url + "?versions=" + rand;
+								}
+								res = element.tabAdd('x-tab',{
+									title:title,
+									content:'<iframe frameborder="0" src="' + url + '" class="x-iframe"></iframe>'
+									,id:i
+								});
+								element.tabChange("x-tab",i);
+							}
+
+			 	});
+			});
+						
+	
+					var isShow = true;  //定义一个标志位
+//									点击按钮,收缩左边导航条
+//					    $('.kit-side-fold').click(function(){
+//					        $('.x-side li:eq(0)').each(function(){
+//					            if($(this).is(':hidden')){
+//						            $(this).show();
+////						            		字体
+//									$('.cv').show()
+//						            $('.layui-nav-side i').show()
+////						            		图标
+//					                $('.layui-side .layui-nav-more').show()
+////					                		子级菜单
+//					                $('.layui-side .layui-nav-child dd').show()
+//					            }else{
+//					            	$(this).hide();
+//									$('.cv').hide();
+//					                $('.layui-nav-side i').hide()
+//					                $('.layui-side .layui-nav-more').hide()
+//					                $('.layui-side .layui-nav-child dd').hide()
+//					            }
+//					            
+//					        });
+//					        if(isShow){
+////					        				收缩以后的宽度
+//								$('.cvc').css('display','block');
+//								$('.wk-one').css('display','block');
+//					            $('.layui-side.layui-bg-black').width(60); 
+////					           				 内容区域扩大
+//					            $('.layui-body').css('margin-left', -140 +'px');
+////					            			header
+//					            $('.cv').css('margin-right', -140 +'px');
+//					            $('.layui-header').css('margin-left', -140 +'px')
+////					            			底部区域
+//								$('.layui-footer').css('margin-left', -140 +'px');
+//					            isShow =false;
+//					        }else{
+//					        	$('.wk-one').css('display','none');
+//					        	$('.cvc').css('display','none');
+//					            $('.layui-side.layui-bg-black').width(200);
+//					            $('.layui-body').css('margin-left', 0 +'px');
+//					            $('.x-side li:eq(1)').css('margin-top', 0 +'px');
+//					            $('.layui-footer').css('margin-left', 0 +'px');
+//					            $('.layui-header').css('margin-left', 0 +'px')
+//					            $('.cv').css('margin-left', 0 +'px')
+//					            isShow =true;
+//					        }
+//					    });
+//					    					鼠标移动到侧边图标收缩以后的菜单
+					   
+					    $('.tow').mouseout(function(){
+					    	isShow =true;
+					    	if($('.layui-side').width() == 60){
+					    		$('.layui-side #sideul .layui-nav-item').css('display','block');
+					    		$('.header').css('display','block');
+					    		$('.cv').css('display','block');
+					    		$('.tow').hide();
+					    		$('.cvc').hide();
+					    		$('.wk-one').hide()
+					    		$('#sideul').width(200);
+					    		$('.layui-header').css('margin-left', 0 +'px');
+					    		$('.layui-body').css('margin-left', 0 +'px');
+//					    		$('.layui-nav-item i').fadeIn("1000");
+//					            $('.layui-nav-more').fadeIn("1000");
+//								$('.header').fadeIn("1000");
+//					    		$('.layui-body').css('margin-left', 0 +'px');
+//					            $('.x-side li:eq(1)').css('margin-top', 0 +'px');
+//					            $('.layui-footer').css('margin-left', 0 +'px');
+//					            $('.layui-header').css('margin-left', 0 +'px');
+//					            $('.layui-nav-child dd').fadeIn("1000");
+//					            $('.layui-logo').fadeIn("1000")
+//					            $('.wk-one').css('display','none')
+//					            $('.cvc').css('display','none');
+//					            $('.cv').show();
+					    	}
+					    })
+					    $('#sideul').mouseleave(function(){
+					    	$('#sideul').width(60);
+					    	$('.layui-header').css('margin-left', -140 +'px');
+					    	$('.layui-body').css('margin-left', -140 +'px');
+					    	$('.layui-side #sideul .layui-nav-item').css('display','none');
+//					   		$('.header').animate({opacity:'0',});
+							$('.header').hide()
+					   		$('.cv').css('display','none');
+					   		$('.tow').show();
+					   		$('.cvc').show();
+				    		$('.wk-one').show();
+					    })
+
+//					     				判断当屏幕宽度小于1000px的时候
+						$(window).resize(function(){
+							if($('.layui-container').width()<1000){
+								$('.kit-side-fold').unbind('click');
+//					        				左侧导航栏消失
+					       		$('.layui-nav-side').hide()
+//					        				内容区域
+						   		$('.site-content').css('margin-left', 0 +'px');
+					       }else{
+					       		$('.kit-side-fold').bind('click')
+					        	$('.layui-nav-side').show()
+					        	$('.site-content').css('margin-left', 200 +'px');
+					        }
+						})
+					});
+					   
+	</script>
+</html>

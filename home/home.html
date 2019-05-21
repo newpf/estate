@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>laiwukeji</title>
-		<link rel="stylesheet" href="../chajian/layui.css">
+		<link rel="stylesheet" href="../layui/layui-v2.4.5/layui/css/layui.css">
 		<script src="../chajian/jquery-3.2.1.min.js"></script>
-		<script src="../chajian/layui.js"></script>
+		<script src="../layui/layui-v2.4.5/layui/layui.js"></script>
 		<style>
 							/*头部导航条*/
 			.header{background: #fff;position: fixed;width: 100%;}
@@ -14,7 +14,7 @@
 			.btn{float: right;}
 			.btn {height:34px;margin:12px 10px;padding:0 25px;line-height: 34px;border:1px solid #007DDB;border-radius: 8px;}
 			.layui-nav .layui-nav-item a:hover{color: #1E9FFF;}
-			.aae{background: #01AAED;}
+			.aae{background: #01AAED;color: #fff;}
 			.logo{position: absolute;}
 			.logo img{height: 60px;}
 			.one{margin: 0 auto;}
@@ -30,7 +30,6 @@
 			.layui-main .layui-col-md12{height: auto;margin-bottom:40px ;}
 			.layui-main .layui-col-md12 .layui-col-md3{height:250px;border: 5px solid #fff;}
 			.layui-main .layui-col-md12 .layui-col-md4{height:250px;border: 3px solid #fff;}
-			#name{height: auto; margin-bottom:50px; background: #EEEEEE;text-align: left;}
 			.layui-row{text-align: center;}
 			legend{color: #1E9FFF;}
 			.layui-elem-field{border-color: #0000FF;}
@@ -38,17 +37,43 @@
 			.layui-col-md3 span{display: inline-block; line-height: 30px;}
 			.zd{color: #999999;}
 			.col-b{margin-bottom: 20%;}
+			.layui-elem-field .you{color: #666666;font-weight: bold;}
+			.field-c{border-color:#fff;margin-bottom:10px ;}
+			.derline{color:#02b2b5; font: 28px "微软雅黑";}
+			.gy{margin-bottom:10% ;height: auto;}
+			.gy .layui-col-md9{background: #F2F2F2;height:300px;padding: 20px 50px 15px 25px;text-align: left;font:15px "微软雅黑";}
+			.gy .layui-col-md9 h1{font: 26px "微软雅黑";}
+			.gy .layui-col-md9 span{margin-top:10px ; display: inline-block; color: #666666;}
+			.gy{margin-top: 2%;height: auto;}
+			.gy .layui-col-md3{height:300px;padding: 25px 0;}
+			.gy .layui-col-md3 img{width: 100%;height: 100%;}
+			.gy .layui-col-md9 #btn{font:16px "微软雅黑";line-height:40px;width: auto; padding: 0 25px; color: #fff;background: #02B2B5;position: absolute; bottom: 15px;}
+			.layui-badge-dot{margin-right: 5px;}
+			.dt{margin-bottom: 10%;height: auto;}
+			.dt .layui-col-md3{height: 240px;border: 10px solid #fff;}
+			.dt .layui-col-md3 span{color: #777777;vertical-align:top;}
+			.dt .layui-col-md3 img{width: 100%;height: 90%;}
+			.you span{color: #009688;font: 8px "微软雅黑";}
+			.you span i{color: #009688;font: 8px "微软雅黑";}
 							/*咨询我们*/
 			.box-zx{height:50px;width:50px;position: fixed;right: 20px;bottom: 16%; background: #007DDB;padding: 15px;color:#fff;}
 		 	.box-zx:hover{cursor:pointer;}
 		 	.layui-col-md5 .layui-card-header{font-weight: 600; font: 20px/42px '微软雅黑'}
 		 	.layui-col-md5 .layui-card-body{padding: 10px 40px;height: 150px;}
 		 					/*底部区域*/
-		 	.footer-index{padding: 20px 0 20px 0; line-height: 30px; background: rgba(2,5,1,0.8); color: #FFF9EC;}
-		 	.footer-index .layui-main{text-align: center;}
-		 	.footer-index .layui-main .left{float:left; display: inline-block;}
-		 	.footer-index .layui-main .right{float:right; display: inline-block;}
-		 	.footer-index .layui-main .right img{width: 40%;height: 40%;}
+		 	.footer-index{padding-top:20px;height:auto;background: rgba(2,5,1,0.8); color: #FFF9EC;}
+		 	.footer-index .layui-main{text-align:left;}
+		 	.footer-index .layui-main .right img{width: 30%;height: 30%;margin-left:3% ;}
+		 	.footer-index .layui-main p{color:#C9C9C9;}
+		 	.qy{color: #01AAED; font: 20px "微软雅黑";vertical-align:top;}
+		 	.whole{color: #007DDB; line-height: 35px;}
+		 	.dh{font:16px "微软雅黑";}
+		 	.layui-icon{color: #FFB800;font-size: 22px;}
+		 	.green{color:#00FF00;font-size: 25px;vertical-align:top;}
+		 	.footer-index .layui-main .center{text-align: center;}
+		 	.footer-index .layui-main .center p{color: #fff;}
+		 					/*咨询我们*/
+		 	.box-zx{text-align: center;font: 15px "微软雅黑";line-height: 24px;}
 		</style>
 	</head>
 	<body>
@@ -91,6 +116,7 @@
 						<!--中部内容区域-->
 			<div class="layui-container ">
 				<div class="layui-row row-one">
+											<!--全方面服务-->
 						<fieldset class="layui-elem-field layui-field-title">
 							<legend>全方面服务</legend>
 						</fieldset>
@@ -116,8 +142,7 @@
 								<span>可手动添加临时收费项目，将复杂的收费计算简单化，减少员工工作负担与误差。</span>
 							</div>
 						</div>					
-
-
+											<!--手机APP-->
 						<fieldset class="layui-elem-field layui-field-title field-b">
 							<legend>手机APP</legend>
 						</fieldset>
@@ -132,45 +157,201 @@
 							<div class="layui-col-md4">
 								<img src="../img/wx_02.png"/>
 							</div>
-						</div>					
-
-										 <!--中部公司介绍-->
-					<div id="name" class="layui-col-md12">
-												<!--左侧区域-->
-						<div class="layui-col-md5 layui-col-md-offset1"style="margin-top: 30px;">
-					    	<div class="layui-card-header">公司简介</div>
-					    	<div class="layui-card-body"> 
-					    		莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+						</div>			
+											<!--关于我们-->
+						<fieldset class="layui-elem-field layui-field-title field-c">
+							<legend class="you">关于我们</legend>
+						</fieldset>
+						<span class="zd">ABOUT US</span>
+						<div class="derline">__</div>
+						<div class="layui-col-md12 gy">
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAg2uqX0gUo84CZATCsAjiJAg.jpg"/>
 							</div>
-							<div class="layui-card-header">收费管理</div>
-							<div class="layui-card-body">
-								莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+							<div class="layui-col-md9">
+								<h1>我们是工程师、创新者</h1>
+								<span>莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。	</span>
+								<div id="btn">
+									了解更多
+								</div>
 							</div>
-				    	</div>
-				    							<!--右侧区域-->
-				    	<div class="layui-col-md5 "style="margin-top: 30px;">
-					    	<div class="layui-card-header">系统特点</div>
-					    	<div class="layui-card-body">
-					    		莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+						</div>		
+												<!--收费管理-->
+						<fieldset class="layui-elem-field layui-field-title field-c">
+							<legend class="you">收费管理</legend>
+						</fieldset>
+						<span class="zd">CHARGE MANAGEMENT</span>
+						<div class="derline">__</div>
+						<div class="layui-col-md12 gy">
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAg2uqX0gUo84CZATCsAjiJAg.jpg"/>
 							</div>
-							<div class="layui-card-header">动态</div>
-					    	<div class="layui-card-body">
-					    		莱唔科技公司成立于2016年12月。 公司自主研发的门禁管理系统，为成长型中小企业客户提供高效完善员工管理、薪酬管理、行业一卡通、物业管理等服务集成业务。
+							<div class="layui-col-md9">
+								<h1>物业管理服务收费包括下列项目:</h1>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										管理费，用于物业管理区域的日常管理，包括物业管理区域内的巡视、检查、物业维修、更新费用的账务管理，物业档案资料的保管和其它有关物业管理服务;
+									</a>
+								</span>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										房屋设备运行费，用于电梯、水泵等房屋设备运行服务所需的费用;
+									</a>
+								</span>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										保洁费，用于物业管理区域内日常保洁服务所需的费用;
+									</a>
+								</span>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										保安费，用于物业管理区域内日常安全保卫服务所需的费用;
+									</a>
+								</span>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										维修费，用于物业维修服务所需的费用(费用按实际维修项目计算);
+									</a>
+								</span>
+								<div id="btn">
+									了解更多
+								</div>
 							</div>
-				    	</div>		
-					</div>
+						</div>	
+												<!--系统特点-->
+					<fieldset class="layui-elem-field layui-field-title field-c">
+							<legend class="you">系统特点</legend>
+						</fieldset>
+						<span class="zd">SYSTEM CHARACTERISTICS</span>
+						<div class="derline">__</div>
+						<div class="layui-col-md12 gy">
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAg2uqX0gUo84CZATCsAjiJAg.jpg"/>
+							</div>
+							<div class="layui-col-md9">
+								<h1>我们积累了丰富的经验:</h1>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										管理费，用于物业管理区域的日常管理，包括物业管理区域内的巡视、检查、物业维修、更新费用的账务管理，物业档案资料的保管和其它有关物业管理服务;
+									</a>
+								</span>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										房屋设备运行费，用于电梯、水泵等房屋设备运行服务所需的费用;
+									</a>
+								</span>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										保洁费，用于物业管理区域内日常保洁服务所需的费用;
+									</a>
+								</span>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										保安费，用于物业管理区域内日常安全保卫服务所需的费用;
+									</a>
+								</span>
+								<span>
+									<a>
+										<i class="layui-badge-dot layui-bg-orange"></i>
+										维修费，用于物业维修服务所需的费用(费用按实际维修项目计算);
+									</a>
+								</span>
+								<div id="btn">
+									了解更多
+								</div>
+							</div>
+						</div>	
+													<!--企业动态-->
+						<fieldset class="layui-elem-field layui-field-title field-c">
+							<legend class="you">企业动态 典型客户<br><span>查看更多<i class="layui-icon">&#xe65b;</i></span></legend>
+						</fieldset>
+						<div class="layui-col-md12 dt">
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg"/>
+								<span>海口瑞丁物业管理有限公司</span>
+							</div>
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg"/>
+								<span>海口瑞丁物业管理有限公司</span>
+							</div>
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg"/>
+								<span>海口瑞丁物业管理有限公司</span>
+							</div>
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg"/>
+								<span>海口瑞丁物业管理有限公司</span>
+							</div>
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg"/>
+								<span>海口瑞丁物业管理有限公司</span>
+							</div>
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg"/>
+								<span>海口瑞丁物业管理有限公司</span>
+							</div>
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg"/>
+								<span>海口瑞丁物业管理有限公司</span>
+							</div>
+							<div class="layui-col-md3">
+								<img src="../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg"/>
+								<span>海口瑞丁物业管理有限公司</span>
+							</div>
+							
+						</div>
 				</div>
 			</div>
 									<!--底部区域-->
 			<div class="footer-index layui-col-md12">
 				<div class="layui-main">
-					<p class="left">电子邮箱:newpfthatsme1@163.com<br>企业地址:郑州市管城回族区美林河畔一号楼2806</p>
-					<p class="right">电话:15203885929<br>企业微信: <img src="../img/1556002005(1).jpg"/></p>
-
+					<p class="left layui-col-md4">
+						<i class="whole">
+							<i class="layui-icon">&#xe609;</i>
+						电子邮箱: 
+						</i>
+						newpfthatsme1@163.com
+						<br>
+						<i class="whole">
+							<i class="layui-icon">&#xe715;</i>
+						企业地址: </i>
+						郑州市管城回族区美林河畔一号楼2806
+						<br>
+						<i class="dh">
+							<i class="whole">
+								<i class="layui-icon">&#xe678;</i>
+								企业电话: </i>
+							15203885929<br>
+							<i class="whole">
+								<i class="layui-icon">&#xe606;</i>
+								服务热线: </i>
+							15203885929<br>
+						</i>
+					</p>
+					<p class="right layui-col-md4 layui-col-md-offset4">
+						<i class="qy">
+							<i class="layui-icon green">&#xe677;</i>
+							企业微信: 
+						</i><img src="../img/1556002005(1).jpg"/>
+					</p>
+					<div class="center layui-col-md12">
+						<p>2019河南莱唔智能科技有限公司</p>
+						<p>版权所有 All Rights Resevied</p>
+						<p>联系我们</p>
+					</div>
 				</div>
 			</div>
 									<!--咨询我们-->
-			<div class="box-zx"><br>
+			<div class="box-zx">在线<br>资讯
 				<div class="zx-zc">
 					<a href=" javascript:;"></a>
 					<a href=" javascript:;"></a>
@@ -181,8 +362,8 @@
 	</body>
 	<script>
 		$(document).ready(function(){
-			layui.use('element'),function(){
-				var element = layui.element
+			layui.use(),function(){
+				
 			}
 		})
 	</script>
