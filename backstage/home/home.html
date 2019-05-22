@@ -14,10 +14,11 @@
 		.layui-col-lg2{background:#1E9FFF ;height: 100%;}
 		.grid{width: 100%;}
 		.site-content {margin-left: 200px;}
-		.header{font: 12px "微软雅黑";line-height: 20px;text-align: center;margin: 20px 0;display: none; transition: width .2s, height .2s, transform .2s;-webkit-transition: width .2s, height .2s, -webkit-transform .2s;}
+		.header{width:200px;height:100px;font: 12px "微软雅黑";line-height: 20px;text-align: center;margin: 20px 0;}
 		.header span{display: block;}
+		.header img{display: none;margin: 0 auto;}
 		.header .color{margin-top: 15px;color: #737383;}
-		.layui-header ul{padding: 0 80px 0 0; }
+		.layui-header ul{padding: 0 80px 0 30px; }
 		.layui-header{margin-left: -140px;}
 		.header .color-tow{font: 15px "宋体";margin-top: 5px;color: #93D1FF;font-weight:bold;}
 		.layui-input{width: 20%;}
@@ -33,33 +34,33 @@
         }*/
        	.layui-bg-black{margin-top: -60px;z-index: 99999999;}
 		.layui-show{height: 100%;}
-		.x-iframe {position:absolute;height:100%;width:100%;}
+		.x-iframe {position:absolute;left:0;width:100%; }
 		.layui-tab{margin: 0;}
 		.layui-layout-right dd{border-bottom:1px solid #E2E2E2;line-height: 32px;}
-		.layui-body{width: 100%;height: auto;overflow: hidden;margin-left:-140px ;}
+		.layui-body{margin-left:-140px ;}
 		.cv{width:200px;height:60px;text-align: center;margin-bottom:20px;background: #000000;display: none;}
 		.wk{font-weight: 600;font: 18px/60px "微软雅黑";color: #009688;}
 		.layui-layout-admin .layui-side{width: 60px;}
-		.layui-side .layui-bg-black{}
-		#sideul{transition: width .4s;}
-		.cvc{width: 60px;height: 60px;background: #000000;text-align: center;line-height: 60px;}
-		.wk-one{width:60px ;height: 100px;margin-bottom:40px;text-align: center;line-height: 50px;line-height: 50px;}
+		#sideul{transition: width .1s;}
+		.cvc{width: 60px;height: 60px;background: #000000;text-align: center;line-height: 60px;transition: width .4s;}
+		/*.wk-one{width:60px ;height: 100px;margin-bottom:40px;text-align: center;line-height: 50px;line-height: 50px;}
 		.wk-one img{width: 100%;height: 100%;margin-top: 30px;}
-		.wk-one span{vertical-align:top;}
+		.wk-one span{vertical-align:top;}*/
 		.layui-side .layui-bg-black .layui-nav-item{display: none;}
 		.tow{line-height: 45px;display: inline-block;margin-left:-3px;width:60px;margin-right:100%;text-align: center;}
+		.layui-footer{margin-left:-140px ;}
 		</style>
 	</head>
-	<body class="layui-layout-body" >
+	<body >
 		<div class="layui-layout layui-layout-admin">	
 									<!--上侧导航条-->
 			    	<div class="layui-header">
 						<ul class="layui-nav layui-layout-left" lay-filter="side">
-							<li class="layui-nav-item layadmin-flexible left" lay-unselect>
+							<!--<li class="layui-nav-item layadmin-flexible left" lay-unselect>
 						       	<a href="javascript:;" class="kit-side-fold" title="侧边伸缩">
 						           <i class=" alone layui-icon layui-icon-shrink-right" aria-hidden="true" ></i>
 						        </a>
-					        </li>
+					        </li>-->
 		
 						  	<li class="layui-nav-item left">
 							    <a href="">控制台</a>		
@@ -102,8 +103,8 @@
 				    				<span class="layui-nav-more"></span>
 				    			</a>
 				    			<dl class="layui-nav-child">
-				    				<dd><a href="javascript:;" _href="" ><cite>更改个人信息</cite></a></dd>
-				    				<dd><a href="javascript:;" _href=""><cite>表单</cite></a></dd>
+				    				<dd><a href="javascript:;" _href="../homepage/one.html" ><cite>表单</cite></a></dd>
+				    				<dd><a href="javascript:;" _href="../../../Signin/sf.html"><cite>表单</cite></a></dd>
 				    				<dd><a href="javascript:;" _href=""><cite>日历</cite></a></dd>
 				    				<dd><a href="javascript:;" _href=""><cite>时间线</cite></a></dd>
 				    			</dl>
@@ -186,7 +187,7 @@
 					</ul>
 					<div class="layui-tab-content">
 						<div class="layui-tab-item layui-show">
-							<iframe frameborder="0" src="../kongzhitai/stration-six.html" class="x-iframe"></iframe>
+							<iframe width="100%" height="600" frameborder="0"src="../../zhuye/hone.html"  id="main1"  class="x-iframe" scrolling="auto"  ></iframe>
 						</div>
 					</div>
 				</div>
@@ -216,12 +217,17 @@
 				    layer.msg(JSON.stringify(data.field));
 				    return false;
 			 	});
-
+				function asd(){
+					 num = Math.floor(Math.random()*100+1);
+					 window.num2 = num;
+				}
 //			 	监听导航点击					
 			 	element.on('nav(side)',function(elem){
 			 		//layui 2.3.0 版,elem 返回的是当前 A元素,需要在父元素中找 _href 值
+			 		var num='';
 			 		var title = elem.find('cite').text();
 			 		var	url = elem.offsetParent().find('a').attr('_href');
+			 		
 //			 	        	如果没有节点
 						if(url == undefined){
 							return false;
@@ -236,25 +242,47 @@
 						}
 //								新建选项卡
 							if(i == $('.layui-tab-title li').length){
+								asd();
+			 					alert(num2)
 								rand = Math.random();
+//									alert(111)
 								if(url.length == 0 || url.indexOf("javascript")>-1){
+//									alert(222)
 									return;
 								}else if(url.indexOf("?" > -1)){
-
+//									alert(333)
 								}else{
 									url = url + "?versions=" + rand;
-								}
+//									alert(444)
+								}	
 								res = element.tabAdd('x-tab',{
 									title:title,
-									content:'<iframe frameborder="0" src="' + url + '" class="x-iframe"></iframe>'
-									,id:i
+//									content:'<iframe frameborder="0" src="' + url + '" class="x-iframe"></iframe>'
+									content:'<iframe width="100%" height="600" frameborder="0" id = "'+ num2 +'" src="' + url + '"class="x-iframe" scrolling="auto"></iframe>'
+									,id:i,
+									
 								});
 								element.tabChange("x-tab",i);
+								changeFrameHeight();
+								
 							}
 
 			 	});
+			 				function changeFrameHeight(){
+//			 		asd();
+//			 		alert(num2)
+							        var ifm= document.getElementById('' +num2);
+							        ifm.height=document.documentElement.clientHeight-147;
+							  }
+					    window.onresize = function(){ 
+					    	changeFrameHeight();
+					    }
+					    $(function(){
+					    	changeFrameHeight();
+					    });
 			});
-						
+//					console.log(num)
+					
 	
 					var isShow = true;  //定义一个标志位
 //									点击按钮,收缩左边导航条
@@ -305,11 +333,12 @@
 //					    });
 //					    					鼠标移动到侧边图标收缩以后的菜单
 					   
-					    $('.tow').mouseout(function(){
+					    $('#sideul').mouseout(function(){
 					    	isShow =true;
 					    	if($('.layui-side').width() == 60){
 					    		$('.layui-side #sideul .layui-nav-item').css('display','block');
-					    		$('.header').css('display','block');
+//					    		$('.header img').fadeIn();
+								$(".header img").css('display','block')
 					    		$('.cv').css('display','block');
 					    		$('.tow').hide();
 					    		$('.cvc').hide();
@@ -333,12 +362,15 @@
 					    })
 					    $('#sideul').mouseleave(function(){
 					    	$('#sideul').width(60);
+//					    	$('.header img').fadeOut();
+							$('.header img').hide(400)
 					    	$('.layui-header').css('margin-left', -140 +'px');
 					    	$('.layui-body').css('margin-left', -140 +'px');
 					    	$('.layui-side #sideul .layui-nav-item').css('display','none');
 //					   		$('.header').animate({opacity:'0',});
-							$('.header').hide()
-					   		$('.cv').css('display','none');
+//							$('.header').hide();
+//							$('.header img').hide();
+					   		$('.cv').hide();
 					   		$('.tow').show();
 					   		$('.cvc').show();
 				    		$('.wk-one').show();
@@ -358,7 +390,31 @@
 					        	$('.site-content').css('margin-left', 200 +'px');
 					        }
 						})
-					});
-					   
+						$(".x-iframe").render({ //其它参数在此省略
+							  height: 'full-20' //高度最大化减去差值
+							}); 
+//						function iframeInit(id) {
+//				        //根据ID获取iframe对象
+//						        var ifr = document.getElementById(id);
+//						    	ifr.onload = function () {
+//						            //解决打开高度太高的页面后再打开高度较小页面滚动条不收缩
+//						            ifr.style.height = '0px';
+//						            var iDoc = ifr.contentDocument || ifr.document;
+//						            var height = calcPageHeight(iDoc);
+//						            if (height < 850) {
+//						                height = 850;
+//						            }
+//						            ifr.style.height = height + 'px';
+//						        };
+//						   }
+//						$(function () {
+//					        iframeInit('main1');
+//					    });
+			  
+    
+    });
+    					
+						
+					    
 	</script>
 </html>

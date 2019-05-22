@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>form</title>
+		<link rel="stylesheet" href="../../layui/layui-v2.4.5/layui/css/layui.css">
+		<script src="../../chajian/jquery-3.2.1.min.js"></script>
+		<script src="../../layui/layui-v2.4.5/layui/layui.js"></script>
+		<style>
+			tr{
+				text-align: center;
+			}
+			.red input{
+				height: ;
+				width: 40%;
+				margin: 15px 15px;
+				float: left;
+			}
+			.red1 input{
+				height: ;
+				width: 40%;
+				margin: 15px 15px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+											<!--表单导航按钮-->
+		<div class="btn" style="width: 50%; margin: 20px auto; text-align: center; ">
+					<button class="layui-btn">查找</button>
+					<button class="layui-btn">删除</button>
+					<button class="layui-btn">修改</button>
+					<button class="layui-btn">添加</button>
+		</div>
+		<input type="text" class="layui-input" style="width: 50%; margin: 20px auto;"/>
+		<table class="layui-table height: 'full-200', cellMinWidth: 80, page: true, limit:30," style="width: 50%; margin: 0 auto;">
+								<!--表单高度-->
+					<colgroup>
+							    <col width="50">
+					            <col width="50">
+							    <col width="50">
+							    <col width="50">
+							    <col width="50">
+							    <col width="50">
+							    <col width="50">
+							    <col width="50">
+					</colgroup>
+											<!--表单-->
+					<thead>
+							<tr>
+								<th style="text-align: center;">
+									<form class="layui-form" >
+										<div class="layui-form-item" style="">
+			          						<input type="checkbox" name="remember" lay-skin="primary" >
+	        							</div>
+	        						</form>
+								</th>
+								<th style="text-align: center;">工号</th>
+							    <th style="text-align: center;">昵称</th>
+							    <th style="text-align: center;">性别</th>
+							    <th style="text-align: center;">城市</th>
+							    <th style="text-align: center;">职业</th>
+							    <th style="text-align: center;">加入时间</th>
+							    <th style="text-align: center;">签名</th>
+							</tr> 
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align: center;">
+								<form class="layui-form" >
+									<div class="layui-form-item" style="">
+			          					<input type="checkbox" name="remember" lay-skin="primary" >
+	        						</div>
+	        					</form>
+							</td>
+							<td>1</td>
+						    <td>小飞</td>
+						    <td>男</td>
+						    <td>郑州</td>
+						    <td>WEB前端开发工程师</td>
+				      		<td>2016-2-25</td>
+							<td>星星之火,可以燎原</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<form class="layui-form" >
+									<div class="layui-form-item" style="">
+			          					<input type="checkbox" name="remember" lay-skin="primary" >
+	        						</div>
+	        					</form>
+							</td>
+							<td>2</td>
+						    <td>小飞</td>
+						    <td>男</td>
+						    <td>郑州</td>
+						    <td>WEB前端开发工程师</td>
+				      		<td>2016-2-25</td>
+							<td>星星之火,可以燎原</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<form class="layui-form" >
+									<div class="layui-form-item" style="">
+			          					<input type="checkbox" name="remember" lay-skin="primary" >
+	        						</div>
+	        					</form>
+							</td>
+							<td>3</td>
+						    <td>小飞</td>
+						    <td>男</td>
+						    <td>郑州</td>
+						    <td>WEB前端开发工程师</td>
+				      		<td>2016-2-25</td>
+							<td>星星之火,可以燎原</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<form class="layui-form" >
+									<div class="layui-form-item" style="">
+			          					<input type="checkbox" name="remember" lay-skin="primary" >
+	        						</div>
+	        					</form>
+							</td>
+							<td>4</td>
+						    <td>小飞</td>
+						    <td>男</td>
+						    <td>郑州</td>
+						    <td>WEB前端开发工程师</td>
+				      		<td>2016-2-25</td>
+							<td>星星之火,可以燎原</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<form class="layui-form" >
+									<div class="layui-form-item" style="">
+			          					<input type="checkbox" name="remember" lay-skin="primary" >
+	        						</div>
+	        					</form>
+							</td>
+							<td>5</td>
+						    <td>小飞</td>
+						    <td>男</td>
+						    <td>郑州</td>
+						    <td>WEB前端开发工程师</td>
+				      		<td>2016-2-25</td>
+							<td>星星之火,可以燎原</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<form class="layui-form" >
+									<div class="layui-form-item" style="">
+			          					<input type="checkbox" name="remember" lay-skin="primary" >
+	        						</div>
+	        					</form>
+							</td>
+							<td>6</td>
+						    <td>小飞</td>
+						    <td>女</td>
+						    <td>郑州</td>
+						    <td>WEB前端开发工程师</td>
+				      		<td>2016-2-25</td>
+							<td>星星之火,可以燎原</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<form class="layui-form" >
+									<div class="layui-form-item" style="">
+			          					<input type="checkbox" name="remember" lay-skin="primary" >
+	        						</div>
+	        					</form>
+							</td>
+							<td>7</td>
+						    <td>小飞</td>
+						    <td>女</td>
+						    <td>郑州</td>
+						    <td>WEB前端开发工程师</td>
+				      		<td>2016-2-25</td>
+							<td>星星之火,可以燎原</td>
+						</tr>
+						<tr>
+							<td style="text-align: center;">
+								<form class="layui-form" >
+									<div class="layui-form-item" style="">
+			          					<input type="checkbox" name="remember" lay-skin="primary" >
+	        						</div>
+	        					</form>
+							</td>
+							<td>8</td>
+						    <td>小飞</td>
+						    <td>男</td>
+						    <td>郑州</td>
+						    <td>WEB前端开发工程师</td>
+				      		<td>2016-2-25</td>
+							<td>星星之火,可以燎原</td>
+						</tr>
+					</tbody>
+				</table>
+											<!--点击修改的遮罩层-->
+				<div class="layui-form red" style="height: 357px; display: none;">
+					<input type="text" placeholder="工号" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="昵称" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="性别" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="城市" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="职业" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="加入时间" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="签名" autocomplete="off"  class="layui-input">
+					<div class="layui-form-item btnn" lay-submit style="height: 38px; width: 100%; line-height: 38px; text-align: center;background: #009688;cursor: pointer;">
+				<div class="btn" style="color: #fff;">确定</div>
+			</div>
+				</div>
+											<!--点击添加的遮罩层-->
+				<div class="layui-form red1" style="height: 357px; display: none;">
+					<input type="text" placeholder="工号" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="昵称" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="性别" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="城市" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="职业" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="加入时间" autocomplete="off"  class="layui-input">
+					<input type="text" placeholder="签名" autocomplete="off"  class="layui-input">
+					<div class="layui-form-item btnn" lay-submit style="height: 38px; width: 100%; line-height: 38px; text-align: center;background: #009688;cursor: pointer;">
+				<div class="btn1" style="color: #fff;">确定</div>
+			</div>
+				</div>
+				
+	</body>
+	<script>
+	    $(document).ready(function(){
+	    	layui.use(['element','form','jquery'],function(){
+	    		var element = layui.element,
+	    			$ = layui.jquery,
+	    			form = layui.form
+					var isShow = true;
+//									点击查找
+						$('.layui-btn:eq(0)').click(function(){
+								var $val = $('.layui-input').val();
+								$('table tbody tr').hide().filter(':contains('+$val+')').show();
+						})
+//									点击删除
+						$('.layui-btn:eq(1)').click(function(){
+							$('input[name = remember]:checked').each(function(){
+								num = $(this).parents('tr').index();
+								if($('table tbody').find("tr:eq("+num+")").remove()){
+									
+								}
+							})
+						})
+//									点击修改
+						$('.layui-btn:eq(2)').click(function(){
+							$('input[name = remember]:checked').each(function(){
+//								if (!$('input[name = remember]:checked')) {
+//									layer.msg('sad')
+//								}else{7
+//										点击修改弹出遮罩层
+									layer.open({
+										type:1,
+										area:['600px','400px'],
+										shadeClose: true,
+										content:$('.red'),	
+									})
+									var parent_td=$('input[name = remember]:checked').parent().parent().parent().parent().children();
+									var arr=[];
+//												循环出他的文本内容
+									for(var i=0;i<parent_td.length;i++){
+										var arr_s=parent_td[i].innerText;
+										arr.push(arr_s);
+									}
+									arr.shift()
+//												循环到input里面
+									var input_zh=$(".red").find("input")
+									for(var i=0;i<arr.length;i++){
+											input_zh[i].value=arr[i];
+									}
+//									var child_gh=parent_tr.find("td:eq(1)").text()
+//									var child_nm=parent_tr.find("td:eq(2)").text()
+//									var child_xb=parent_tr.find("td:eq(3)").text()
+//									var child_cs=parent_tr.find("td:eq(4)").text()
+//									var child_zy=parent_tr.find("td:eq(5)").text()
+//									var child_jr=parent_tr.find("td:eq(6)").text()
+//									var child_qm=parent_tr.find("td:eq(7)").text()
+									
+									//添加到遮罩层
+//									$(".red").find("input:eq(0)").val(child_gh)
+//									$(".red").find("input:eq(1)").val(child_gh)
+//									$(".red").find("input:eq(2)").val(child_gh)
+//									$(".red").find("input:eq(3)").val(child_gh)
+//									$(".red").find("input:eq(4)").val(child_gh)
+//									$(".red").find("input:eq(5)").val(child_gh)
+//									$(".red").find("input:eq(6)").val(child_gh)
+//									$(".red").find("input:eq(7)").val(child_gh)
+//								}
+								
+//												点击确定获取val添加到表单
+								$('div .btn').click(function(){
+//													点击确定,关闭遮罩层
+									layer.closeAll('page');
+									var arrinps=[],
+//													遮罩层里的input列出
+										input_zh=$(".red").find("input") 
+//													循环成一个数组
+									for(var i=0;i<input_zh.length;i++){
+										var arr_inp=input_zh[i].value;
+										arrinps.push(arr_inp)
+									}
+									arrinps.unshift("");
+									console.log(arrinps);
+//													input内容循环到表单
+									var parent_td=$('input[name = remember]:checked').parent().parent().parent().parent().children();
+									for(var i=1;i<parent_td.length;i++){
+											parent_td[i].innerText=arrinps[i];
+									}
+								})
+							})
+						})
+						
+//									点击添加
+						$('.layui-btn:eq(3)').click(function(){
+//													点击添加弹出遮罩层
+							layer.open({
+								type:1,
+								area:['600px','400px'],
+								content:$('.red1')
+							});
+							$('div .btn1').click(function(){
+//													点击确定,关闭遮罩层
+									layer.closeAll('page');	
+									var arrinps=[],
+										input_zh=$(".red1").find("input"),
+										$tr=$("<tr></tr>")
+//													循环把我输入的内容在input添加到tr里面的td
+									for(var i=0;i<input_zh.length;i++){
+										$tr.append("<td>"+input_zh[i].value+"</td>");
+									}
+//													勾选默认空数组,需要循环以后添加进去
+									$tr.prepend('<td style="text-align: center;"><form class="layui-form" ><div class="layui-form-item" style=""><input type="checkbox" name="remember" lay-skin="primary" ></div></form></td>');
+//													添加一组tr
+									$("tbody").append($tr);
+//													动态添加失效重新渲染
+									form.render();
+//									var parent_td=$('input[name = remember]:checked').parent().parent().parent().parent().children();
+//									for(var i=1;i<parent_td.length;i++){
+//										parent_td[i].innerText=arrinps[i];
+//									}			
+								})
+						})
+
+	    	})
+	    })
+	
+		</script>
+</html>
+
+		<!--<style>
+			
+		</style>
+	</head>
+	<body>
+		<table class="layui-table">
+			<colgroup>
+			    <col width="150">
+			    <col width="200">
+			    <col>
+			</colgroup>
+			<thead>
+			    <tr>
+			      <th>昵称</th>
+			      <th>加入时间</th>
+			      <th>签名</th>
+			    </tr> 
+			</thead>
+			<tbody>
+			    <tr>
+			      <td>贤心</td>
+			      <td>2016-11-29</td>
+			      <td>人生就像是一场修行</td>
+			    </tr>
+			    <tr>
+			      <td>许闲心</td>
+			      <td>2016-11-28</td>
+			      <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+			    </tr>
+			</tbody>
+		</table>
+	</body>
+	<script>
+		$(document).ready(function(){
+			layui.use(['element','form'], function(){
+				  	var element = layui.element,
+				  		form = layui.form
+			});
+		})
+	</script>
+</html>-->
