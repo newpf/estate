@@ -63,10 +63,10 @@
 					        </li>-->
 		
 						  	<li class="layui-nav-item left">
-							    <a href="">控制台</a>		
+							    <a href="">当前小区设置</a>		
 						  	</li>
 							<li class="layui-nav-item left">
-							    <a href="">个人中心</a>
+							    <a href="">添加收费项目</a>
 							</li>
 							</ul>
 						<ul class="layui-nav layui-layout-right">
@@ -99,13 +99,13 @@
 				    		<li class="layui-nav-item">
 				    			<a href="javascript:;">
 				    				<span class="layui-icon">&#xe68e;</span>
-				    				<i>主页</i>
+				    				<i>收费管理</i>
 				    				<span class="layui-nav-more"></span>
 				    			</a>
 				    			<dl class="layui-nav-child">
-				    				<dd><a href="javascript:;" _href="../homepage/one.html" ><cite>表单</cite></a></dd>
-				    				<dd><a href="javascript:;" _href="../../../Signin/sf.html"><cite>表单</cite></a></dd>
-				    				<dd><a href="javascript:;" _href=""><cite>日历</cite></a></dd>
+				    				<dd><a href="javascript:;" _href="../homepage/one.html" ><cite>周期性收费</cite></a></dd>
+				    				<dd><a href="javascript:;" _href="../../../Signin/sf.html"><cite>临时性收费</cite></a></dd>
+				    				<dd><a href="javascript:;" _href=""><cite>押金类收费</cite></a></dd>
 				    				<dd><a href="javascript:;" _href=""><cite>时间线</cite></a></dd>
 				    			</dl>
 				    		</li>
@@ -187,7 +187,7 @@
 					</ul>
 					<div class="layui-tab-content">
 						<div class="layui-tab-item layui-show">
-							<iframe width="100%" height="600" frameborder="0"src="../../zhuye/hone.html"  id="main1"  class="x-iframe" scrolling="auto"  ></iframe>
+							<iframe width="100%" height="600" frameborder="0"src="../../zhuye/hone.html" id="main1"   class="x-iframe" scrolling="auto"  ></iframe>
 						</div>
 					</div>
 				</div>
@@ -217,10 +217,10 @@
 				    layer.msg(JSON.stringify(data.field));
 				    return false;
 			 	});
-				function asd(){
-					 num = Math.floor(Math.random()*100+1);
-					 window.num2 = num;
-				}
+//				function asd(){
+//					 num = Math.floor(Math.random()*100+1);
+//					 window.num2 = num;
+//				}
 //			 	监听导航点击					
 			 	element.on('nav(side)',function(elem){
 			 		//layui 2.3.0 版,elem 返回的是当前 A元素,需要在父元素中找 _href 值
@@ -242,8 +242,8 @@
 						}
 //								新建选项卡
 							if(i == $('.layui-tab-title li').length){
-								asd();
-			 					alert(num2)
+//								asd();
+//			 					alert(num2)
 								rand = Math.random();
 //									alert(111)
 								if(url.length == 0 || url.indexOf("javascript")>-1){
@@ -258,28 +258,16 @@
 								res = element.tabAdd('x-tab',{
 									title:title,
 //									content:'<iframe frameborder="0" src="' + url + '" class="x-iframe"></iframe>'
-									content:'<iframe width="100%" height="600" frameborder="0" id = "'+ num2 +'" src="' + url + '"class="x-iframe" scrolling="auto"></iframe>'
+									content:'<iframe width="100%" height="600" frameborder="0"  src="' + url + '" class="x-iframe" scrolling="auto"></iframe>'
 									,id:i,
 									
 								});
 								element.tabChange("x-tab",i);
 								changeFrameHeight();
-								
 							}
 
 			 	});
-			 				function changeFrameHeight(){
-//			 		asd();
-//			 		alert(num2)
-							        var ifm= document.getElementById('' +num2);
-							        ifm.height=document.documentElement.clientHeight-147;
-							  }
-					    window.onresize = function(){ 
-					    	changeFrameHeight();
-					    }
-					    $(function(){
-					    	changeFrameHeight();
-					    });
+			 		
 			});
 //					console.log(num)
 					
@@ -401,7 +389,7 @@
 //						            ifr.style.height = '0px';
 //						            var iDoc = ifr.contentDocument || ifr.document;
 //						            var height = calcPageHeight(iDoc);
-//						            if (height < 850) {
+//						            if (height < 850){
 //						                height = 850;
 //						            }
 //						            ifr.style.height = height + 'px';
@@ -410,11 +398,16 @@
 //						$(function () {
 //					        iframeInit('main1');
 //					    });
-			  
-    
-    });
+   						 });
     					
-						
+						function changeFrameHeight(){
+//			 		asd();
+//			 		alert(num2)
+							    var ifm= document.getElementById('main1' );
+							    ifm.height=document.documentElement.clientHeight-147;
+								  }
+							    window.onresize=function(){ changeFrameHeight();}
+    							$(function(){changeFrameHeight();});
 					    
 	</script>
 </html>
