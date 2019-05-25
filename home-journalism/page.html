@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>laiwukeji</title>
+		<link rel="stylesheet" href="../layui/layui-v2.4.5/layui/css/layui.css">
+		<script src="../chajian/jquery-3.2.1.min.js"></script>
+		<script src="../layui/layui-v2.4.5/layui/layui.js"></script>
+		<style>
+							/*头部导航条*/
+			.layui-header{height: 110px;}
+			.header{background:url(../img/timg2.jpg) repeat-x;width: 100%;}
+			.layui-nav .layui-nav-item a{color:#fff;}
+			.layui-nav{float: right;background-color: rgba(0,0,0,0); color:#000000; margin-top: 52px;margin-right: 28px;padding-right: 0;}
+			.layui-nav li .xw{font: 16.5px "微软雅黑";font-weight: 600;}
+			.layui-nav li a{ font: 19px/50px "微软雅黑"; color: #fff; }
+			.layui-nav .layui-nav-item a{padding: 0 30px;}
+			.btn{float: right;}
+			.btn {height:34px;margin:12px 10px;padding:0 25px;line-height: 34px;border:1px solid #007DDB;border-radius: 8px;}
+			.layui-nav .layui-nav-item a:hover{color: #1E9FFF;}
+			.aae{background: #01AAED;color: #fff;}
+			.logo{position: absolute;margin-left:36px; margin-top: 22px;}
+			.logo img{height: 59px;border: 3px solid #fff;border-radius: 50%;float: left;}
+			.one{margin: 0 auto;}
+			.wk-right{float: right;margin-left: 10px;text-align: center; color:#fff;}
+			.wk-top{font: 36px "微软雅黑";}
+			.wk-bottm{font:13px "微软雅黑";font-weight:600 ;}
+			
+							/*中部新闻文章*/
+			/*.wk-main img{width: 100%; height: 100%;}   如果中间logo是图片*/
+			.site-banner{height: 900px; width: 100%; position: relative;}
+			.site-banner .site-banner-main{width: 100%; height: auto;text-align: center;padding-top: 85px;padding-bottom:36px ;}
+			.site-banner-main span{display: block;}
+			.span-top{font: 50px "微软雅黑"; font-weight: 600;}
+			.span-center{font: 28px "微软雅黑"; color: #9a9a9a; font-weight:600 ; margin-top: -4px;letter-spacing: -1px;}
+			.span-bottom{width: 105px;height: 8px; background: #e84e1c;text-align: center;margin:0 auto;margin-top: 26px;}
+							/*新闻文章图片区域*/
+			.three-logo{display:-webkit-flex;display:-webkit-box;display:flex;justify-content:center;}
+			.three-logo .flex{height: 522px;width:33.3333%;float: left;}
+			.logo-left{background: url(../img/AD0Is5SlBRACGAAg2uqX0gUo84CZATCsAjiJAg.jpg) no-repeat;background-size:100% 100% ;}
+			.logo-center{background: url(../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg) no-repeat;background-size:100% 100% ;}
+			.logo-right{background: url(../img/cb5a86abef70230bf7b6615f2a46ab6e.jpg) no-repeat;background-size:100% 100% ;}
+			.three-logo{text-align: center;}
+			.three-logo .flex-top{display:inline-block;margin-top:240px;font: 29px "微软雅黑";color: #fff;font-weight: 600;}
+			.three-logo .tow{margin-top:220px;}
+			.tow-left{display: block;float: left;}
+			.flex-bottom{width: 33.33333%;height: 60px;position: absolute;bottom: 137px;font: 28px/50px "微软雅黑";color: #fff;}
+			.flex-bottom-left{float: left; width: 120px;height: 100%;margin-left: 44px;}
+			.flex-bottom-right{float: right; width: 100px;height: 100%;margin-right: 34px;}
+			.flex-bottom-left .layui-icon{font-size:40px;width: 43px;height: 40px;float:left;}
+			.flex-bottom-right .layui-icon{font-size:38px;width: 43px;height: 42px;float:right;}
+								/*底部区域*/
+			.footer-index{text-align: center; background: #2E2D3C; color: #fff;padding: 40px;}
+			.footer-index a{color: #fff;margin-left: 10px;display: inline-block;}
+			
+		</style>
+	</head>
+	<body>
+												<!--头部导航条-->
+		<div class="layui-header header header-doc">
+				<!--<div class="layui-main">-->
+					<a class="logo">
+						<img src="../img/微信图片_20190525104353.png"/>
+						<div class="wk-right"><span class="wk-top">悟空智能社区</span><br><span class="wk-bottm">WUKONG SMART COMMUNITY</span></div>
+					</a>
+					<ul class="layui-nav">
+						<li class="layui-nav-item">
+							<a href="javascript:;">HOME</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:;" class="xw">新闻&文章</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:;"class="xw">合作&伙伴</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:;"class="xw">服务&支持</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:;"class="xw">客户&案例</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">LOGIN</a>
+						</li>
+					</ul>
+				<!--</div>-->
+			</div>
+						<!--中部logo区域-->
+			<div class="site-banner">
+				<div class="site-banner-main">	
+					<span class="span-top">新闻&文章</span>
+					<span class="span-center">NEWS & ARTICLES</span>
+					<span class="span-bottom"></span>
+				</div>
+				<div class="three-logo">	
+					<div class="flex logo-left">
+						<span class="flex-top">社区和我们的生活</span>
+						<div class="flex-bottom">
+							<span class="flex-bottom-left"><i class="layui-icon">&#xe6c6;</i>238</span>
+							<span class="flex-bottom-right"><i class="layui-icon">&#xe65b;</i></span>
+						</div>
+					</div>
+					<div class="flex logo-center">
+						<span class="flex-top tow">悟空社区近期推出的<br><span class="tow-left">新服务热议</span></span>
+						<div class="flex-bottom">
+							<span class="flex-bottom-left"><i class="layui-icon">&#xe6c6;</i>337</span>
+							<span class="flex-bottom-right"><i class="layui-icon">&#xe65b;</i></span>
+						</div>
+					</div>
+					<div class="flex logo-right">
+						<span class="flex-top tow">新型智能物业收费服务<br><span class="tow-left">给我们带来了什么?</span></span>
+						<div class="flex-bottom">
+							<span class="flex-bottom-left"><i class="layui-icon">&#xe6c6;</i>293</span>
+							<span class="flex-bottom-right"><i class="layui-icon">&#xe65b;</i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+									<!--底部区域-->
+			<div class="footer-index">
+						<p>2019河南莱唔智能科技有限公司</p>
+						<p>版权所有 All Rights Resevied<a href="http://www.beian.miit.gov.cn">豫ICP备17019100号</a></p>
+			</div>
+	</body>
+	<script>
+		$(document).ready(function(){
+//								兼容ios低版本
+			var b = $.browser;
+			if(/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)){
+				$('.three-logo .flex').css('float', "none"); 
+				
+			}
+		})
+
+	</script>
+</html>

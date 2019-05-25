@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>laiwukeji</title>
+		<link rel="stylesheet" href="../layui/layui-v2.4.5/layui/css/layui.css">
+		<script src="../chajian/jquery-3.2.1.min.js"></script>
+		<script src="../layui/layui-v2.4.5/layui/layui.js"></script>
+		<style>
+							/*头部导航条*/
+			.layui-header{height: 110px;}
+			.header{background:url(../img/cb5a86abef70230bf7b6615f2a46ab6e1.jpg) repeat-x;width: 100%;}
+			.layui-nav .layui-nav-item a{color:#fff;}
+			.layui-nav{float: right;background-color: rgba(0,0,0,0); color:#000000; margin-top: 52px;margin-right: 28px;padding-right: 0;}
+			.layui-nav li .xw{font: 16.5px "微软雅黑";font-weight: 600;}
+			.layui-nav li a{ font: 19px/50px "微软雅黑"; color: #fff; }
+			.layui-nav .layui-nav-item a{padding: 0 30px;}
+			.btn{float: right;}
+			.btn {height:34px;margin:12px 10px;padding:0 25px;line-height: 34px;border:1px solid #007DDB;border-radius: 8px;}
+			.layui-nav .layui-nav-item a:hover{color: #1E9FFF;}
+			.aae{background: #01AAED;color: #fff;}
+			.logo{position: absolute;margin-left:36px; margin-top: 22px;}
+			.logo img{height: 59px;border: 3px solid #fff;border-radius: 50%;float: left;}
+			.one{margin: 0 auto;}
+			.wk-right{float: right;margin-left: 10px;text-align: center; color:#fff;}
+			.wk-top{font: 36px "微软雅黑";}
+			.wk-bottm{font:13px "微软雅黑";font-weight:600 ;}
+							/*中部logo区域*/				
+			.site-banner{height: 900px; width: 100%; position: relative; background: url(../img/500628783.jpg) no-repeat;background-size:100% 100%;}
+			.wk-main{height:728px ;width: 574px;background:rgba(0,0,0,0.3);margin: 0 auto;margin-top: 24px;text-align: center;}
+			.site-banner-main{position: absolute;width: 100%; height: 100%;}
+							/*登录页面*/
+			.wk-main img{margin-top:73px;height:140px;width: 146px; }
+			.wk-main .back{font: 32px "微软雅黑";color: #fff;font-weight: 600;line-height: 80px;}
+			.box{width: 310px;height: auto;margin: 0 auto;}
+			.box input{width: 100%;border: none;line-height:20px;font:17px "微软雅黑";font-weight: 600;height: 29px;margin-top:20px ;padding-bottom:13px;border-bottom:1px solid #fff;background: none;color: #fff;}
+			input::-webkit-input-placeholder{color: #fff;}/*谷歌 ie8*/
+			input::-moz-placeholder{color:#FFFFFF;opacity: 1;}/*火狐*/
+
+{color: #fff;}
+			.box .box-input{margin-top: 29px;}
+			.box-one{height:100px;margin-top: 45px;font: 20px "微软雅黑";font-weight:600 ;}
+			.box-one .box-one-left{float: left;line-height: 45px;background: #fff;color: #e84e1c;}
+			.box-one .box-one-right{float: right;width: 82px;line-height: 45px; background:#e84e1c;;}
+			.box-one span{width: 119.5px;height: 55px; background: #000000;color: #fff;}
+			.span-one{font: 12px/0 "微软雅黑";font-weight: 600; vertical-align: top;}
+			span .span-one-left{-webkit-transform:scale(0.7);transform:scale(0.7);float: left;margin-top: -5px;height: auto;color: #e84e1c;}
+			span .span-one-right{float: left;margin-top: -5px;height: auto; width: 82px;}
+								/*底部区域*/
+			.footer-index{text-align: center; background: #2E2D3C; color: #fff;padding: 40px;}
+			.footer-index a{color: #fff;margin-left: 10px;}
+		</style>
+	</head>
+	<body>
+												<!--头部导航条-->
+		<div class="layui-header header header-doc">
+				<!--<div class="layui-main">-->
+					<a class="logo">
+						<img src="../img/微信图片_20190525104353.png"/>
+						<div class="wk-right"><span class="wk-top">悟空智能社区</span><br><span class="wk-bottm">WUKONG SMART COMMUNITY</span></div>
+					</a>
+					<ul class="layui-nav">
+						<li class="layui-nav-item">
+							<a href="javascript:;">HOME</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:;" class="xw">新闻&文章</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:;"class="xw">合作&伙伴</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:;"class="xw">服务&支持</a>
+						</li>
+						<li class="layui-nav-item ">
+							<a href="javascript:;"class="xw">客户&案例</a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">LOGIN</a>
+						</li>
+					</ul>
+				<!--</div>-->
+			</div>
+						<!--中部logo区域-->
+			<div class="site-banner">
+				<div class="site-banner-main">
+				<div class="wk-main">
+					<img src="../img/微信图片_20190525104353.png"/>
+					<div class="back">WELCOME BACK !</div>
+					<div class="box">
+						<input type="text" placeholder="集团用户代码"/>
+						<input type="text" class="box-input" placeholder="用户名"/>
+						<input type="text" class="box-input" placeholder="登录密码"/>
+						<input type="text" maxlength="30" name="username" class="box-input" placeholder="短信验证码"/>
+						
+						<div class="box-one">
+							<span class="box-one-left">免费注册<br><span class="span-one span-one-left">SIGNUP FOR FREE</span></span>
+							<span class="box-one-right">登入<br><span class="span-one span-one-right">LOGIN</span></span>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+									<!--底部区域-->
+			<div class="footer-index">
+						<p>2019河南莱唔智能科技有限公司</p>
+						<p>版权所有 All Rights Resevied<a href="http://www.beian.miit.gov.cn">豫ICP备17019100号</a></p>
+			</div>
+	</body>
+	<script>
+//								placeholder 兼容ie8及以上浏览器
+			 $("[placeholder]")
+			    .focus(function() {
+			      var input = $(this);
+			      	if (input.val() == input.attr("placeholder")) {
+				        input.val("");
+				        input.removeClass("placeholder");
+			      	};
+			    })
+			    .blur(function() {
+				    var input = $(this);
+				    if (input.val() == "" || input.val() == input.attr("placeholder")) {
+				        input.addClass("placeholder");
+				        input.val(input.attr("placeholder"));
+			        };
+			    })
+			    .blur()
+			    .parents("form")
+			    .submit(function() {
+			      	$(this).find("[placeholder]").each(function() {
+				        var input = $(this);
+				        if (input.val() == input.attr("placeholder")) {
+				          	input.val("");
+				        };
+			    	});
+			    });
+
+	</script>
+</html>
