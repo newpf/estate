@@ -8,7 +8,7 @@
 		<script src="../layui/layui-v2.4.5/layui/layui.js"></script>
 		<style>
 							/*头部导航条*/
-			.layui-header{height: 110px;}
+			.layui-header{height: 110px;position:fixed;}
 			.header{background:url(../img/cb5a86abef70230bf7b6615f2a46ab6e1.jpg) repeat-x;width: 100%;}
 			.layui-nav .layui-nav-item a{color:#fff;}
 			.layui-nav{float: right;background-color: rgba(0,0,0,0); color:#000000; margin-top: 52px;margin-right: 28px;padding-right: 0;}
@@ -24,28 +24,85 @@
 			.one{margin: 0 auto;}
 			.wk-right{float: right;margin-left: 10px;text-align: center; color:#fff;}
 			.wk-top{font: 36px "微软雅黑";}
-			.wk-bottm{font:13px "微软雅黑";font-weight:600 ;}
-							/*中部logo区域*/				
-			.site-banner{height: 900px; width: 100%; position: relative; background: url(../img/500628783.jpg) no-repeat;background-size:100% 100%;}
-			.wk-main{height:728px ;width: 574px;background:rgba(0,0,0,0.3);margin: 0 auto;margin-top: 24px;text-align: center;}
-			.site-banner-main{position: absolute;width: 100%; height: 100%;}
+			.wk-bottm{font:13px "微软雅黑";font-weight:600 ;}							
+								/*中部logo区域*/				
+			.site-banner{height: auto; width: 100%; }
+			.site-banner-main{ text-align: center;padding-top: 110px;}
+			.site-banner img{width: 100%;height: 100%;}
 							/*登录页面*/
-			.wk-main img{margin-top:73px;height:140px;width: 146px; }
+			.wk-main-box{position:absolute;width: 100%;margin: 0 auto;margin-top:-47.5%;text-align: center;}
+			.wk-main{width: 30%;margin: 0 auto;background:rgba(0,0,0,0.3);}
+			.wk-main img{padding-top:15%;height:140px;width: 146px; }
 			.wk-main .back{font: 32px "微软雅黑";color: #fff;font-weight: 600;line-height: 80px;}
 			.box{width: 310px;height: auto;margin: 0 auto;}
-			.box input{width: 100%;border: none;line-height:20px;font:17px "微软雅黑";font-weight: 600;height: 29px;margin-top:20px ;padding-bottom:13px;border-bottom:1px solid #fff;background: none;color: #fff;}
+			.box input{width:100%;border: none;line-height:20px;font:17px "微软雅黑";font-weight: 600;height: 29px;margin-top:6.2% ;padding-bottom:4.8%;border-bottom:1px solid #fff;background: none;color: #fff;}
 			input::-webkit-input-placeholder{color: #fff;}/*谷歌 ie8*/
 			input::-moz-placeholder{color:#FFFFFF;opacity: 1;}/*火狐*/
 
 {color: #fff;}
 			.box .box-input{margin-top: 29px;}
-			.box-one{height:100px;margin-top: 45px;font: 20px "微软雅黑";font-weight:600 ;}
+			.box-one{width:100%;height:100px;padding-top: 15%;font: 20px "微软雅黑";font-weight:600 ;}
 			.box-one .box-one-left{float: left;line-height: 45px;background: #fff;color: #e84e1c;}
 			.box-one .box-one-right{float: right;width: 82px;line-height: 45px; background:#e84e1c;;}
 			.box-one span{width: 119.5px;height: 55px; background: #000000;color: #fff;}
 			.span-one{font: 12px/0 "微软雅黑";font-weight: 600; vertical-align: top;}
 			span .span-one-left{-webkit-transform:scale(0.7);transform:scale(0.7);float: left;margin-top: -5px;height: auto;color: #e84e1c;}
 			span .span-one-right{float: left;margin-top: -5px;height: auto; width: 82px;}
+			@media only screen and (max-width: 1540px){
+				.wk-main{transform: scale(0.9);margin-top:-3%;}
+			}
+			@media only screen and (max-width: 1450px){
+				/*.box input{font-size:14px ;}
+				.wk-main img{ padding-top: 8%;}
+				.wk-main .back{line-height: 40px;}
+				.box .box-input {margin-top: 13px;}
+				.box input{padding-bottom: 3%;}
+				.box-one{padding-top: 10%;}*/
+				.wk-main{transform: scale(0.85);margin-top:-4%;}
+			}
+			@media only screen and (max-width: 1300px){
+				.wk-main{transform: scale(0.82);margin-top:-6%;}
+			}
+			@media only screen and (max-width: 1200px){
+				.layui-nav .layui-nav-item a{padding: 0 15px;}
+				.layui-nav li a{font-size: 17px;}
+				.layui-nav li .xw{font-size: 16px;padding: 0 15px;}
+				.wk-main{transform: scale(0.78);margin-top:-7%;}
+			}
+			@media only screen and (max-width: 1150px){
+				.wk-main{transform: scale(0.65);margin-top:-13%;}
+				.box{width: auto;padding: 0 10px;}
+			}
+			@media only screen and (max-width: 960px){
+				.layui-nav li a{font-size: 15px; padding: 0 10px;}
+				.layui-nav li .xw{font-size: 14px;padding: 0 10px;}
+				.wk-top{font-size: 20px;}
+				.wk-right{margin-top: 25px;}
+				.wk-bottm{display: none;}
+				.logo img{height: 35px;margin-top: 20px;}
+				.wk-main{transform: scale(0.65);margin-top:3%;}
+
+				.wk-main img{display: none;}
+				.back{display: none;}
+			}
+			@media only screen and (max-width: 760px){
+				.logo{margin: 0 auto;}
+				.layui-nav li a{font-size: 12px; padding: 0 5px;}
+				.layui-nav li .xw{font-size: 12px;padding: 0 5px;}
+				.layui-nav {width: 100%; text-align: center; margin-right: 0; padding: 0;}
+				.wk-main{transform: scale(0.6);margin-top:-4%;}
+			}
+			@media only screen and (max-width: 450px){
+				.wk-top{font-size: 16px;}
+				.wk-right{margin: 22px 0 0 5px;}
+				.logo img{height: 20px;}
+				.site-banner{display: none;}
+				.wk-main{background: #2E2D3C;}
+				.wk-main img{display: none;}
+				.layui-header{position: relative;}
+				.layui-nav .layui-nav-item a{font-size:15px ;}
+				.layui-header{height: auto;}
+			}
 								/*底部区域*/
 			.footer-index{text-align: center; background: #2E2D3C; color: #fff;padding: 40px;}
 			.footer-index a{color: #fff;margin-left: 10px;}
@@ -56,11 +113,11 @@
 		<div class="layui-header header header-doc">
 				<!--<div class="layui-main">-->
 					<a class="logo">
-						<img src="../img/微信图片_20190525104353.png"/>
+						<img src="../img/微信图片_20190521152933.png"/>
 						<div class="wk-right"><span class="wk-top">悟空智能社区</span><br><span class="wk-bottm">WUKONG SMART COMMUNITY</span></div>
 					</a>
 					<ul class="layui-nav">
-						<li class="layui-nav-item">
+						<li class="layui-nav-item ">
 							<a href="javascript:;">HOME</a>
 						</li>
 						<li class="layui-nav-item ">
@@ -76,7 +133,7 @@
 							<a href="javascript:;"class="xw">客户&案例</a>
 						</li>
 						<li class="layui-nav-item">
-							<a href="javascript:;">LOGIN</a>
+							<a href="../home-signin/denglu.html">LOGIN</a>
 						</li>
 					</ul>
 				<!--</div>-->
@@ -84,21 +141,23 @@
 						<!--中部logo区域-->
 			<div class="site-banner">
 				<div class="site-banner-main">
-				<div class="wk-main">
-					<img src="../img/微信图片_20190525104353.png"/>
-					<div class="back">WELCOME BACK !</div>
-					<div class="box">
-						<input type="text" placeholder="集团用户代码"/>
-						<input type="text" class="box-input" placeholder="用户名"/>
-						<input type="text" class="box-input" placeholder="登录密码"/>
-						<input type="text" maxlength="30" name="username" class="box-input" placeholder="短信验证码"/>
-						
-						<div class="box-one">
-							<span class="box-one-left">免费注册<br><span class="span-one span-one-left">SIGNUP FOR FREE</span></span>
-							<span class="box-one-right">登入<br><span class="span-one span-one-right">LOGIN</span></span>
+					<img src="../img/微信图片_20190524203619.png"/>
+					<div class="wk-main-box">
+						<div class="wk-main">
+							<img src="../img/微信图片_20190525104353.png"/>
+							<div class="back">WELCOME BACK !</div>
+							<div class="box">
+								<input type="text" placeholder="集团用户代码"/>
+								<input type="text" class="box-input" placeholder="用户名"/>
+								<input type="text" class="box-input" placeholder="登录密码"/>
+								<input type="text" maxlength="30" name="username" class="box-input" placeholder="短信验证码"/>
+								<div class="box-one">
+									<span class="box-one-left">免费注册<br><span class="span-one span-one-left">SIGNUP FOR FREE</span></span>
+									<span class="box-one-right">登入<br><span class="span-one span-one-right">LOGIN</span></span>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
 				</div>
 			</div>
 									<!--底部区域-->
@@ -134,6 +193,11 @@
 				        };
 			    	});
 			    });
+//										360兼容问题
+				 if((window.navigator.mimeTypes[40] || !window.navigator.mimeTypes.length)){
+				 	$('span .span-one-left').css('word-spacing',"-1px")
+				 }
 
+				 
 	</script>
 </html>

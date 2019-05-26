@@ -8,14 +8,13 @@
 		<script src="../layui/layui-v2.4.5/layui/layui.js"></script>
 		<style>
 							/*头部导航条*/
-			.layui-header{height: 110px;}
+			.layui-header{height: 110px;position:fixed;}
 			.header{background:url(../img/timg2.jpg) repeat-x;width: 100%;}
 			.layui-nav .layui-nav-item a{color:#fff;}
 			.layui-nav{float: right;background-color: rgba(0,0,0,0); color:#000000; margin-top: 52px;margin-right: 28px;padding-right: 0;}
 			.layui-nav li .xw{font: 16.5px "微软雅黑";font-weight: 600;}
 			.layui-nav li a{ font: 19px/50px "微软雅黑"; color: #fff; }
 			.layui-nav .layui-nav-item a{padding: 0 30px;}
-			
 			.btn{float: right;}
 			.btn {height:34px;margin:12px 10px;padding:0 25px;line-height: 34px;border:1px solid #007DDB;border-radius: 8px;}
 			.layui-nav .layui-nav-item a:hover{color: #1E9FFF;}
@@ -29,30 +28,81 @@
 			
 							/*中部logo区域*/
 			/*.wk-main img{width: 100%; height: 100%;}   如果中间logo是图片*/
-			.site-banner{height: 900px; width: 100%; position: relative;}
-			.site-banner .site-banner-main{position: absolute;width: 100%; height: 100%;}
-			.site-banner-main {background: url(../img/微信图片_20190524203619.png) no-repeat;background-size:100% 86.4%;}
-			.wk-main{ margin-top: 196px; text-align: center;}
-			.layui-row .field-b{margin-bottom:0;}
-			.wk-main-top{font:26px "微软雅黑"; color: #fff;font-weight: 600;width:auto ;height: 35px;display: inline-block;}
-			.wk-main-center{margin-top:3px;font:125px "宋体"; color:#e84e1c;text-shadow: #fff 2px 2px 1px;width:750px ;height: 125px;display: inline-block;}
-			.wk-main-bottom{margin-top:72px;height:90px;padding: 6px 25px 8px 25px;background:#e84e1c;display: inline-block; color: #fff;font: 36px/60px "微软雅黑";font-weight: 600;width: 144px;height: 90px;text-align: center;}
-			.wk-main-bottom-one{font:26px/18px "微软雅黑";font-weight: 600; vertical-align: top;}
+							
+			.site-banner{height: auto; width: 100%; }
+			.wk-main{ text-align: center;padding-top: 110px;}
+			.wk-main img{width: 100%; height:100%;}
+			.wk-main-top{font:26px "微软雅黑"; color: #fff;font-weight: 600;width:auto ;height: auto;display: inline-block;}
+			.wk-main-center{margin-top:0.4%;font:125px "宋体"; color:#e84e1c;text-shadow: #fff 2px 2px 1px;width:auto ;height: auto;display: inline-block;}
+			.wk-txt{ width: 100%; text-align:center;position: absolute; margin:0 auto;margin-top: -36.5%;}
+			.wk-main-bottom{margin-top:5.8%;padding: 16px 25px 10px 25px;background:#e84e1c;display: inline-block; color: #fff;font-size: 36px;font-weight: 600; width:auto;height: auto;text-align: center;}
+			.wk-main-bottom-one{font:26px "微软雅黑";font-weight: 600; vertical-align: top;}
+			@media only screen and (max-width: 1600px){
+				.wk-main-bottom{margin-top:3.5%}
+			}
+			@media only screen and (max-width: 1200px){
+				.wk-main-top{font-size: 20px;}
+				.wk-main-center{font-size: 100px;}
+				.wk-main-bottom{font-size: 28px;margin-top:2%;padding: 5px 15px 0 15px;}
+				.wk-main-bottom-one{font-size: 20px;}
+				.layui-nav .layui-nav-item a{padding: 0 15px;}
+				.layui-nav li a{font-size: 17px;}
+				.layui-nav li .xw{font-size: 16px;padding: 0 15px;}
+				.wk-top{font-size: 32px;}
+				.wk-bottm{font-size: 12px;}
+				.wk-right{margin-top: 6px;}
+			}
+			@media only screen and (max-width: 960px){
+				.wk-main-top{font-size: 16px;}
+				.wk-main-center{font-size: 80px;}
+				.wk-main-bottom{font-size: 24px;margin-top:1.5%;padding: 5px 10px 0 10px;}
+				.wk-main-bottom-one{font-size: 16px;}
+				.layui-nav li a{font-size: 15px; padding: 0 10px;}
+				.layui-nav li .xw{font-size: 14px;padding: 0 10px;}
+				.wk-top{font-size: 20px;}
+				.wk-right{margin-top: 25px;}
+				.wk-bottm{display: none;}
+				.logo img{height: 35px;margin-top: 20px;}
+			}
+			@media only screen and (max-width: 760px){
+				.logo{margin: 0 auto;}
+				.layui-nav li a{font-size: 12px; padding: 0 5px;}
+				.layui-nav li .xw{font-size: 12px;padding: 0 5px;}
+				.layui-nav {width: 100%; text-align: center; margin-right: 0; padding: 0;}
+				.wk-main-center{font-size:30px;}
+				.wk-main-bottom{height:50px;font-size: 15px;margin-top:1.5%;padding: 0px 10px 0 10px;}
+				.wk-main-bottom-one{font-size: 12px;}
+			}
+			@media only screen and (max-width: 450px){
+				.wk-main-center{font-size:12px;}
+				.wk-main-bottom{height:50px;font-size: 12px;margin-top:1.5%;padding: 0px 10px 0 10px;}
+				.wk-main-bottom-one{font-size: 12px;margin-top :-8px ;display: inline-block;}
+				.wk-top{font-size: 16px;}
+				.wk-right{margin: 22px 0 0 5px;}
+				.logo img{height: 20px;}
+				.site-banner{display: none;}
+				.wk-main{background: #2E2D3C;}
+				.wk-main img{display: none;}
+				.layui-header{position: relative;}
+				.layui-nav .layui-nav-item a{font-size:15px ;}
+				.layui-header{height: auto;}
+			}
 								/*底部区域*/
-			.footer-index{text-align: center; background: #2E2D3C; color: #fff;padding: 40px;}
+			.footer-index{text-align: center; background: #2E2D3C; color: #fff;padding: 40px;position: relative;top: 0;}
 			.footer-index a{color: #fff;margin-left: 10px;}
+			 ::-webkit-scrollbar {display:none}
 		</style>
 	</head>
-	<body>
+	<body >
 												<!--头部导航条-->
 		<div class="layui-header header header-doc">
 				<!--<div class="layui-main">-->
 					<a class="logo">
-						<img src="../img/微信图片_20190525104353.png"/>
+						<img src="../img/微信图片_20190521152933.png"/>
 						<div class="wk-right"><span class="wk-top">悟空智能社区</span><br><span class="wk-bottm">WUKONG SMART COMMUNITY</span></div>
 					</a>
 					<ul class="layui-nav">
-						<li class="layui-nav-item">
+						<li class="layui-nav-item ">
 							<a href="javascript:;">HOME</a>
 						</li>
 						<li class="layui-nav-item ">
@@ -68,20 +118,21 @@
 							<a href="javascript:;"class="xw">客户&案例</a>
 						</li>
 						<li class="layui-nav-item">
-							<a href="javascript:;">LOGIN</a>
+							<a href="../home-signin/denglu.html">LOGIN</a>
 						</li>
 					</ul>
 				<!--</div>-->
 			</div>
 						<!--中部logo区域-->
 			<div class="site-banner">
-				<div class="site-banner-main">	
 					<div class="wk-main">		<!--如果中间logo是图片-->
-						<span class="wk-main-top"><!--<img src=""/>-->PROVIDE ALL THE SERVICE YOU NEED</span><br>
-						<span class="wk-main-center"><!--<img src=""/>-->您的智能管家</span><br>
-						<span class="wk-main-bottom"><!--<img src=""/>-->加入我们<br><span class="wk-main-bottom-one">JOIN NOW</span></span>
+						<img src="../img/微信图片_20190524203619.png"/>
+						<div class="wk-txt">
+							<span class="wk-main-top"><!--<img src=""/>-->PROVIDE ALL THE SERVICE YOU NEED</span><br>
+							<span class="wk-main-center"><!--<img src=""/>-->您的智能管家</span><br>
+							<span class="wk-main-bottom"><!--<img src=""/>-->加入我们<br><span class="wk-main-bottom-one">JOIN NOW</span></span>
+						</div>
 					</div>
-				</div>
 			</div>
 									<!--底部区域-->
 			<div class="footer-index">
