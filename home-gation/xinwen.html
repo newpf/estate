@@ -8,7 +8,7 @@
 		<script src="../layui/layui-v2.4.5/layui/layui.js"></script>
 		<style>
 							/*头部导航条*/
-			.layui-header{height: 110px;}
+			.layui-header{height: 110px;position:fixed;}
 			.header{background:url(../img/timg2.jpg) repeat-x;width: 100%;}
 			.layui-nav .layui-nav-item a{color:#fff;}
 			.layui-nav{float: right;background-color: rgba(0,0,0,0); color:#000000; margin-top: 52px;margin-right: 28px;padding-right: 0;}
@@ -28,15 +28,14 @@
 			
 							/*中部新闻文章*/
 			/*.wk-main img{width: 100%; height: 100%;}   如果中间logo是图片*/
-			.site-banner{height: 900px; width: 100%; position: relative;}
-			.site-banner .site-banner-main{width: 100%; height: auto;text-align: center;padding-top: 85px;padding-bottom:36px ;}
+			.site-banner{ width: 100%; position: relative;}
+			.site-banner .site-banner-main{width: 100%; height: auto;text-align: center;padding-top: 195px;padding-bottom:36px ;}
 			.site-banner-main span{display: block;}
 			.span-top{font: 50px "微软雅黑"; font-weight: 600;}
 			.span-center{font: 28px "微软雅黑"; color: #9a9a9a; font-weight:600 ; margin-top: -4px;letter-spacing: -1px;}
 			.span-bottom{width: 105px;height: 8px; background: #e84e1c;text-align: center;margin:0 auto;margin-top: 26px;}
 							/*新闻文章图片区域*/
-			.three-logo{display:-webkit-flex;display:-webkit-box;display:flex;justify-content:center;}
-			.three-logo .flex{height: 522px;width:33.3333%;float: left;}
+			.three-logo .flex{height: 522px;}
 			.logo-left{background: url(../img/AD0Is5SlBRACGAAg2uqX0gUo84CZATCsAjiJAg.jpg) no-repeat;background-size:100% 100% ;}
 			.logo-center{background: url(../img/AD0Is5SlBRACGAAgp-3ZvgUorce-WzCiAjjIAQ.jpg) no-repeat;background-size:100% 100% ;}
 			.logo-right{background: url(../img/cb5a86abef70230bf7b6615f2a46ab6e.jpg) no-repeat;background-size:100% 100% ;}
@@ -44,15 +43,14 @@
 			.three-logo .flex-top{display:inline-block;margin-top:240px;font: 29px "微软雅黑";color: #fff;font-weight: 600;}
 			.three-logo .tow{margin-top:220px;}
 			.tow-left{display: block;float: left;}
-			.flex-bottom{width: 33.33333%;height: 60px;position: absolute;bottom: 137px;font: 28px/50px "微软雅黑";color: #fff;}
+			.flex-bottom{width: 100%;height: 60px;position: absolute;bottom: 3%;font: 28px/50px "微软雅黑";color: #fff;}
 			.flex-bottom-left{float: left; width: 120px;height: 100%;margin-left: 44px;}
 			.flex-bottom-right{float: right; width: 100px;height: 100%;margin-right: 34px;}
 			.flex-bottom-left .layui-icon{font-size:40px;width: 43px;height: 40px;float:left;}
 			.flex-bottom-right .layui-icon{font-size:38px;width: 43px;height: 42px;float:right;}
 								/*底部区域*/
-			.footer-index{text-align: center; background: #2E2D3C; color: #fff;padding: 40px;}
+			.footer-index{text-align: center; background: #2E2D3C; color: #fff;padding: 40px;position: relative;top: 0;}
 			.footer-index a{color: #fff;margin-left: 10px;display: inline-block;}
-			
 		</style>
 	</head>
 	<body>
@@ -92,22 +90,22 @@
 					<span class="span-center">NEWS & ARTICLES</span>
 					<span class="span-bottom"></span>
 				</div>
-				<div class="three-logo">	
-					<div class="flex logo-left">
+				<div class="three-logo layui-row">	
+					<div class="flex logo-left layui-col-md4">
 						<span class="flex-top">社区和我们的生活</span>
-						<div class="flex-bottom">
+						<div class="flex-bottom" >
 							<span class="flex-bottom-left"><i class="layui-icon">&#xe6c6;</i>238</span>
 							<span class="flex-bottom-right"><i class="layui-icon">&#xe65b;</i></span>
 						</div>
 					</div>
-					<div class="flex logo-center">
+					<div class="flex logo-center layui-col-md4">
 						<span class="flex-top tow">悟空社区近期推出的<br><span class="tow-left">新服务热议</span></span>
 						<div class="flex-bottom">
 							<span class="flex-bottom-left"><i class="layui-icon">&#xe6c6;</i>337</span>
 							<span class="flex-bottom-right"><i class="layui-icon">&#xe65b;</i></span>
 						</div>
 					</div>
-					<div class="flex logo-right">
+					<div class="flex logo-right layui-col-md4">
 						<span class="flex-top tow">新型智能物业收费服务<br><span class="tow-left">给我们带来了什么?</span></span>
 						<div class="flex-bottom">
 							<span class="flex-bottom-left"><i class="layui-icon">&#xe6c6;</i>293</span>
