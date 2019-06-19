@@ -58,7 +58,7 @@ remove.onclick = function(){
                     ee.checked = false;
                 });
             }else{
-                openFullTip('非法移动,报警了!');            }
+                openFullTip('非法移动!');            }
             render(pid);
             treeMenu.innerHTML = renderTree(-1,-1);
             modelTree.style.display = 'none';

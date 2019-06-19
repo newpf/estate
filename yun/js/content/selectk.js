@@ -1,3 +1,4 @@
+//					鼠标左右键点击滑动拉框可选中页面数据
 const folderContent = document.querySelector('.folder-content'); /*放框的*/
 folders.onmousedown = function(ev){
     //为了防止点到文件夹身上,只要目标点不是folders就不能创建kuang

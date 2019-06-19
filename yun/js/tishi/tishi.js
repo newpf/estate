@@ -1,3 +1,4 @@
+//							弹窗
 const fullTipBox = document.querySelector('.full-tip-box');
 
 // openFullTip();

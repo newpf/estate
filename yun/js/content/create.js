@@ -9,12 +9,12 @@ create.onclick = function(){
 }
 /*
     虚拟的dom元素
-
+			新建文件夹
 */
 function createItem(arr,pid){
         let num = 0;
         if(arr){
-            let filterArr = arr.filter(e=>e.title.includes('新建文件夹'));
+            let filterArr = arr.filter(e=>e.title.includes('悟空文件夹'));
             if(filterArr.length)num = filterArr.length+1;
         }else{
             fEmpty.style.display = 'none';
@@ -29,9 +29,9 @@ function createItem(arr,pid){
         let input = document.createElement('input');
         input.className = 'editor';
         input.style.display = 'block';
-        input.value = '新建文件夹'+(num?num:'');
+//        点击新建文件夹txt=默认"新建文件夹"
+        input.value = '悟空文件夹'+(num?num:'');
         input.onchange = function(){
-            console.log('修改了数据');
             create.onOff = true;
         }
         input.onblur = function(){
@@ -40,7 +40,7 @@ function createItem(arr,pid){
                 把重复的拿出来，给未失焦的那条数据
             */
             let val = this.value;
-            //重名
+            //如果文件夹重名
             if(arr && arr.some(e=>e.title == val)){
                 create.onOff = false;
                 this.focus();
