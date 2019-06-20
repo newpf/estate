@@ -14,7 +14,7 @@ create.onclick = function(){
 function createItem(arr,pid){
         let num = 0;
         if(arr){
-            let filterArr = arr.filter(e=>e.title.includes('悟空文件夹'));
+            let filterArr = arr.filter(e=>e.title.includes('悟空文件'));
             if(filterArr.length)num = filterArr.length+1;
         }else{
             fEmpty.style.display = 'none';
@@ -30,7 +30,7 @@ function createItem(arr,pid){
         input.className = 'editor';
         input.style.display = 'block';
 //        点击新建文件夹txt=默认"新建文件夹"
-        input.value = '悟空文件夹'+(num?num:'');
+        input.value = '悟空文件'+(num?num:'');
         input.onchange = function(){
             create.onOff = true;
         }
