@@ -49,11 +49,9 @@ function createItem(arr,pid){
             }else{
                 create.onOff = true;
                 //可以添加数据
-                // console.log(pid);
                 let createId = +new Date;
                 data[createId] = {
                     "id": createId,
-                    // "pid":pid,
                     pid,
                     "title": val,
                     "type": "file",
@@ -61,7 +59,7 @@ function createItem(arr,pid){
                 }
                 render(pid);
                 treeMenu.innerHTML = renderTree(-1,-1);
-            }
+            } 
         }
         let i = document.createElement('i');   
         div.appendChild(img);

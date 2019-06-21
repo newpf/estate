@@ -2,7 +2,6 @@ const breadmenu = document.querySelector('.breadmenu');
 const breadNav = breadmenu.children[1];
 const checkedAll = document.querySelector('#checkedAll');
 /*
-    <a href="javascript:;">微云</a>
 	<span>我的音乐</span>
 */
 renderNav(0);
