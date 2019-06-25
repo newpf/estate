@@ -646,7 +646,8 @@ html,body{
 	color: #66757f;
 	margin-left: 20px;
 	padding-left: 34px;
-	background: url(../img/small_folder.png) no-repeat;
+	background: url(../../img/微信图片_20190525104353.png) no-repeat;
+	background-size: 22px 22px;
 	height: 21px;
 }
 .modal-tree .content{
