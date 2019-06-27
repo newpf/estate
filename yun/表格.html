@@ -255,13 +255,6 @@
 				let s = data.slice(index,index+2).reverse();
 				data.splice(index,2,...s);
 				render(data);
-				// console.log(data);
-				// let obj = data.splice(index,1);
-				// data.splice(index+1,0,obj[0]);
-				// console.log(data);
-				// if(obj){
-				// 	data.splice(index+1,0,obj[0]);
-				// }
 			}
 			up.onclick = function(){
 				let id = this.parentNode.parentNode.dataset.index;
@@ -281,19 +274,12 @@
 			}
 
 		});
-
-		//console.log(trs)
 	}
 
 	checkAll.onchange = function(){
 		data.forEach(e=>e.checked = this.checked);
 		render(data);
 	}
-
-	/*
-		添加
-	*/
-
 	const addName = document.getElementById('name');
 	const addAge = document.getElementById('age');
 	const addBtn = document.getElementById('add');
@@ -314,13 +300,7 @@
 			alert('添加点东西吧!');
 		}
 	}
-
-
-
-	/*
-		排序
-	*/
-
+						/*排序*/
 	let s1 = document.getElementById('s1');
 	let s2 = document.getElementById('s2');
 	let stBtn = document.getElementById('stBtn');
@@ -343,7 +323,7 @@
 
 
 
-	//批量删除
+					//批量删除
 	rm.onclick = function(){
 		let newArr = data.filter(e=>!e.checked);
 		render(newArr);
