@@ -22,7 +22,7 @@ function render(id){
             let img = document.createElement('img');
             img.src = '../img/微信图片_20190525104353.png';
 
-            /*
+            /*	
                 双击进去
             */
             img.ondblclick = function(){
