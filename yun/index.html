@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>莱唔科技</title>
     <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <link href="../chajian/dist/css/share.min.css">
 </head>
 
 <body>
@@ -24,13 +25,13 @@
             </div>
             <div id="nav">
                 <ul class="nav_left" onselectstart="return false;">
-                    <li><i></i>下载</li>
-                    <li><i></i>分享</li>
+                    <li id="download"><i></i>下载</li>
+                    <li class="social-share"><i></i>分享</li>
                     <li id="remove"><i></i>移动到</li>
                     <li id="rename"><i></i>重命名</li>
                     <li id="del"><i></i>删除</li>
                     <li id="create"><i></i>新建文件夹</li>
-                    <li><i></i></li>
+                    <li id="refresh"><i></i></li>
                 </ul>
                 <div class="nav_right">
                     <div class="show_mode"></div>
@@ -50,14 +51,7 @@
                     </div>
                     <div class="bread-nav" onselectstart="return false;"></div>
                 </div>
-                <div class="f-empty"><span>暂无文件,请点击"新建文件夹"或"上传"</span></div>
-                <div id="yj-list">
-                    <span class="dl">下载</span>
-                    <span class="mv">移动到</span>
-                    <span class="de">删除</span>
-                    <span class="rn">重命名</span>
-                    <span class="sh">分享</span>
-                </div>
+                <div class="f-empty"><span>暂无文件,请点击"新建文件夹"新建文件</span></div>
                 <div class="folders"></div>
             </div>
         </section>
@@ -96,6 +90,9 @@
         </div> 
     </div>
     <script src="js/sql/data.js"></script>
+    <script src="js/content/refresh.js"></script>
+    <script src="js/content/share.js"></script>
+    <script src="js/content/download.js"></script>
     <script src="js/tools/index.js"></script>
     <script src="js/setHeight/index.js"></script>
     <script src="js/content/breadmenu.js"></script>
@@ -107,5 +104,7 @@
     <script src="js/content/move.js"></script>
     <script src="js/content/replaceName.js"></script>
     <script src="js/tishi/tishi.js"></script>
+    <script src="../chajian/dist/js/jquery.share.min.js"></script>
+    <script src="../chajian/jquery-3.2.1.min.js"></script>
 </body>
 </html>

@@ -152,20 +152,11 @@ ul li.old{
     arr.forEach(e=>html += `<li>${e}</li>`);
     week.innerHTML = html;
 
-
-    /*
-            提前生成空白格子
-                1.查看这个月的一号是周几
-                2.然后填充前面的格子
-
-            d3 为了知道1号放在哪个位置
-            d4 拿到上个月的时间
-    */
         
         let d3 = new Date;
         d3.setMonth(d3.getMonth()+num);
         
-        let d4 = new Date; //求上个月最后一天
+        let d4 = new Date; //上个月最后一天
         d4.setMonth(d4.getMonth()+num);
         d4.setDate(0);
         let n3 = d4.getDate(); //上个月最后一天

@@ -521,27 +521,6 @@ html,body{
 	background: #999;
 	color:#fff;
 }
-#yj-list{
-	position: absolute;
-	width:80px;
-	height:155px;
-	background: #fff;
-	display: none;
-	z-index: 10000;
-	border: 1px solid #ccc;
-}
-#yj-list span{
-	display: block;
-	padding: 0 10px;
-	height:30px;
-	line-height:30px;
-	border-bottom:1px solid #fff;
-	color:#999;
-	cursor: default;
-}
-#yj-list span:hover{
-	background: #f1f1f1;
-}
 .full-tip-box{
 	position: fixed;
     top: -40px;
